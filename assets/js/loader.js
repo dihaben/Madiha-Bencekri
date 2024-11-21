@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHTML("header", "navbar.html");
   loadHTML("footer", "footer.html");
 
-  // Sidebar Toggle (Optional, if sidebar exists)
+  // Sidebar Toggle functionality (if sidebar exists)
   const sidebarToggle = document.querySelector('.sidebar-toggle');
   const sidebar = document.querySelector('.sidebar');
   if (sidebarToggle && sidebar) {
