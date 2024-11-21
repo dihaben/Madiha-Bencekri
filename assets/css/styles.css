@@ -68,12 +68,10 @@ body {
   font-size: 1.1rem;
   padding: 1rem;
   display: block;
-  text-align: left;
+  text-align: center; /* Center the text inside each button */
   border-radius: 5px;
   margin-bottom: 0.5rem;
   transition: background-color 0.3s ease;
-  width: 100%;
-  text-align: center; /* Align text inside the button */
 }
 
 .sidebar .sidebar-links li a:hover,
@@ -88,13 +86,16 @@ header {
   background-color: #0056b3;
   color: white;
   padding: 1rem 2rem;
-  text-align: center;
   width: 100%;
+  text-align: center;
+  position: relative;
+  top: 0;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ffd700;
+  margin: 0;
   animation: shine 1s linear infinite;
 }
 
@@ -118,27 +119,33 @@ header p.subtitle, header p.tagline {
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px;
+  margin-left: 250px; /* Ensuring content doesn't overlap sidebar */
   padding: 2rem;
-  width: calc(100% - 250px);
+  width: calc(100% - 250px); /* Ensuring full use of available space */
   max-width: 900px;
   margin-top: 60px; /* Space for header */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  text-align: justify; /* Justified text */
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-grow: 1;
-  min-height: calc(100vh - 160px); /* Ensure content takes full height between header and footer */
-  padding-right: 20px; /* Prevent content from being too close to the right side */
+  min-height: calc(100vh - 160px); /* Ensures content takes full height between header and footer */
+  padding-right: 20px;
 }
 
 .main-content h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
 /* Footer Styles */
