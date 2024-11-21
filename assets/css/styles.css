@@ -1,93 +1,18 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+/* Active link in the menu */
+.menu a.active {
+  font-weight: bold;
+  color: #007acc;
 }
 
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-p {
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-/* Sidebar */
+/* Sidebar toggle functionality */
 .sidebar {
-  width: 260px;
-  height: 100vh;
-  background-color: #004d99;
-  color: white;
   position: fixed;
-  padding: 20px;
+  left: -250px;
+  width: 250px;
+  background-color: #f4f4f4;
+  transition: left 0.3s ease;
 }
 
-.sidebar img.profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 10px 0;
-}
-
-.sidebar ul li a {
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.sidebar ul li a:hover {
-  background-color: #0066cc;
-}
-
-/* Hero Section */
-.hero {
-  background-color: #e6f7ff;
-  padding: 40px;
-  text-align: center;
-  margin: 20px 0;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  color: #004d99;
-}
-
-.hero p {
-  font-size: 1.2rem;
-}
-
-.hero .btn {
-  background-color: #0062b9;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.hero .btn:hover {
-  background-color: #004080;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #666;
+.sidebar.active {
+  left: 0;
 }
