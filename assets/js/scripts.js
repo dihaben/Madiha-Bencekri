@@ -1,12 +1,16 @@
-// Collapsible Sidebar for Mobile
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.querySelector(".sidebar-toggle");
-  const sidebar = document.querySelector(".sidebar");
+// Sidebar Toggle Functionality
+const sidebarToggle = document.querySelector('.sidebar-toggle');
+const sidebar = document.querySelector('.sidebar');
 
-  toggleButton.addEventListener("click", function () {
-    sidebar.classList.toggle("active");
-  });
+sidebarToggle.addEventListener('click', () => {
+  // Add or remove the 'active' class to slide the sidebar in or out
+  sidebar.classList.toggle('active');
+
+  // Toggle the aria-expanded attribute for accessibility
+  const expanded = sidebarToggle.getAttribute('aria-expanded') === 'true';
+  sidebarToggle.setAttribute('aria-expanded', !expanded);
 });
+
 
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('.menu a[href^="#"]').forEach(anchor => {
