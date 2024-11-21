@@ -7,8 +7,8 @@
 
 /* Body & Layout */
 body {
-  font-family: 'Arial', sans-serif; /* Improved readability */
-  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -16,40 +16,20 @@ body {
   margin: 0;
 }
 
-/* Header */
-header {
-  background-color: #0077b6; /* Lighter, more readable header */
-  color: white;
-  padding: 1.5rem 2rem;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  font-weight: normal;
-  margin-top: 0;
-  color: #ffcc00; /* Lighter, visible text */
-}
-
 /* Sidebar Styles */
 .sidebar {
-  width: 220px; /* Reduced width */
+  width: 250px; /* Sidebar width */
   position: fixed;
   left: 0;
-  top: 80px; /* Adjusted to fit header */
+  top: 60px; /* Adjusted for header height */
   bottom: 0;
-  background-color: #005f73; /* Darker sidebar for contrast */
+  background-color: #0056b3;
   color: white;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
   transition: transform 0.3s ease;
+  z-index: 999;
 }
 
 .sidebar .sidebar-profile {
@@ -58,21 +38,22 @@ header p {
 }
 
 .sidebar .profile-img {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 3px solid white;
 }
 
 .sidebar .profile-name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  color: white;
 }
 
 .sidebar .profile-title {
-  font-size: 1.1rem;
-  color: #ddd;
+  font-size: 1rem;
+  color: #f1f1f1;
 }
 
 .sidebar .sidebar-links {
@@ -87,50 +68,59 @@ header p {
 .sidebar .sidebar-links li a {
   text-decoration: none;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   display: block;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease;
+  padding: 0.8rem 1rem;
+  background-color: #0056b3;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
 }
 
 .sidebar .sidebar-links li a:hover {
-  color: #ffd700; /* Bright hover effect */
+  background-color: #003f8a;
+  transform: scale(1.05);
 }
 
-.sidebar .sidebar-links li a.active {
-  color: #ffd700; /* Active link color */
+/* Header Styles */
+header {
+  background-color: #0056b3;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  animation: smile 5s ease-in-out infinite;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+/* Header animation: smile effect */
+@keyframes smile {
+  0%, 100% {
+    transform: translateX(0);
+    font-size: 2rem;
+  }
+  50% {
+    transform: translateX(15px);
+    font-size: 2.2rem;
+  }
 }
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* Adjusted for sidebar width */
-  padding: 2rem 3rem;
-  max-width: 1100px;
+  margin-left: 250px; /* Adjusted content for the sidebar width */
+  padding: 2rem;
+  width: calc(100% - 250px); /* Adjust for sidebar width */
+  max-width: 900px;
   margin-top: 80px; /* Space for header */
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
   flex-grow: 1;
-  line-height: 1.8;
-}
-
-.main-content h1 {
-  font-size: 2.5rem;
-  color: #0056b3;
-}
-
-.main-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.main-content ul {
-  list-style: none;
-  padding-left: 1.5rem;
-}
-
-.main-content ul li {
-  font-size: 1.1rem;
+  margin-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Footer Styles */
@@ -138,8 +128,10 @@ footer {
   text-align: center;
   background-color: #0056b3;
   color: white;
-  padding: 1.5rem;
+  padding: 1rem;
   margin-top: auto;
+  width: 100%;
+  position: relative;
 }
 
 footer a {
@@ -151,37 +143,67 @@ footer a:hover {
   color: #ffd700;
 }
 
-/* Font Awesome Icons */
-.fas, .fab {
-  margin-right: 0.5rem;
+/* Typography & Spacing */
+h1, h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-/* Mobile-Friendly Sidebar */
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+ul li {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: #0056b3;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003f8a;
+}
+
+/* Mobile-Friendly Layout */
 @media (max-width: 768px) {
   body {
-    flex-direction: column;
+    flex-direction: column; /* Stack content vertically on mobile */
   }
 
   .sidebar {
-    width: 200px;
-    transform: translateX(-200px);
+    transform: translateX(-250px); /* Initially hidden */
   }
 
   .sidebar.active {
-    transform: translateX(0);
+    transform: translateX(0); /* Show sidebar on toggle */
   }
 
   .main-content {
-    margin-left: 0;
-    padding: 1.5rem;
+    margin-left: 0; /* No left margin on mobile */
+    padding: 1rem; /* Reduced padding for small screens */
   }
 
   header {
     font-size: 1.5rem;
+    padding: 1rem;
   }
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
 }
