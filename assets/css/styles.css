@@ -20,7 +20,8 @@ body {
 .sidebar {
   width: 250px;
   position: fixed;
-  top: 60px; /* Adjusted for header height */
+  top: 0;
+  left: 0;
   bottom: 0;
   background-color: #0056b3;
   color: white;
@@ -68,10 +69,10 @@ body {
   font-size: 1.1rem;
   padding: 1rem;
   display: block;
-  text-align: center; /* Center the text inside each button */
+  text-align: center;
   border-radius: 5px;
   margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar .sidebar-links li a:hover,
@@ -88,8 +89,6 @@ header {
   padding: 1rem 2rem;
   width: 100%;
   text-align: center;
-  position: relative;
-  top: 0;
 }
 
 header h1 {
@@ -119,15 +118,15 @@ header p.subtitle, header p.tagline {
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* Ensuring content doesn't overlap sidebar */
+  margin-left: 250px; /* Ensures the content doesn't overlap sidebar */
   padding: 2rem;
-  width: calc(100% - 250px); /* Ensuring full use of available space */
+  width: calc(100% - 250px); /* Ensures full use of available space */
   max-width: 900px;
-  margin-top: 60px; /* Space for header */
+  margin-top: 60px; /* space for header */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: justify; /* Justified text */
+  text-align: justify;
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
@@ -135,6 +134,7 @@ header p.subtitle, header p.tagline {
   flex-grow: 1;
   min-height: calc(100vh - 160px); /* Ensures content takes full height between header and footer */
   padding-right: 20px;
+  padding-left: 20px;
 }
 
 .main-content h1 {
