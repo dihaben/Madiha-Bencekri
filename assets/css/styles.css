@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+/* Body & Layout */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f9;
@@ -28,10 +29,9 @@ body {
   flex-direction: column;
   padding: 1rem;
   transition: transform 0.3s ease;
-  z-index: 999; /* Ensure sidebar is above other content */
+  z-index: 999;
 }
 
-/* Sidebar Profile */
 .sidebar .sidebar-profile {
   text-align: center;
   margin-bottom: 2rem;
@@ -56,7 +56,6 @@ body {
   color: #f1f1f1;
 }
 
-/* Sidebar Links */
 .sidebar .sidebar-links {
   list-style: none;
   padding: 0;
@@ -79,18 +78,6 @@ body {
   color: #ffd700; /* Hover effect and active link color */
 }
 
-/* Sidebar Toggle Button */
-.sidebar-toggle {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
 /* Main Content Styles */
 .main-content {
   margin-left: 250px; /* Adjusted content for the sidebar width */
@@ -104,19 +91,21 @@ body {
   flex-grow: 1;
 }
 
-/* Welcome Section */
-.welcome-section {
-  margin-bottom: 3rem;
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: #0056b3;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.welcome-section h2 {
-  color: #0056b3;
-  margin-top: 2rem;
-}
-
-.welcome-section ul {
-  list-style: disc;
-  padding-left: 1.5rem;
+.btn:hover {
+  background-color: #004494;
 }
 
 /* Footer Styles */
@@ -125,7 +114,7 @@ footer {
   background-color: #0056b3;
   color: white;
   padding: 1rem;
-  margin-top: auto; /* Push footer to the bottom */
+  margin-top: auto;
 }
 
 footer a {
@@ -137,6 +126,11 @@ footer a:hover {
   color: #ffd700;
 }
 
+/* Font Awesome Icons */
+.fas, .fab {
+  margin-right: 0.5rem;
+}
+
 /* Mobile-Friendly Sidebar */
 @media (max-width: 768px) {
   body {
@@ -144,11 +138,11 @@ footer a:hover {
   }
 
   .sidebar {
-    transform: translateX(-250px); /* Initially hidden off-screen */
+    transform: translateX(-250px); /* Initially hidden */
   }
 
   .sidebar.active {
-    transform: translateX(0); /* Slide sidebar into view */
+    transform: translateX(0); /* Show sidebar on toggle */
   }
 
   .main-content {
@@ -156,7 +150,6 @@ footer a:hover {
     padding: 1rem; /* Reduced padding for small screens */
   }
 
-  /* Hide navbar links and adjust navbar for mobile */
   .navbar-links {
     display: none; /* Hide navbar links on mobile */
   }
