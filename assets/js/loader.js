@@ -1,37 +1,26 @@
-// loader.js - Dynamically loads the sidebar and footer
+// loader.js - Manages sidebar toggle and active link highlighting for the sidebar
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Function to load HTML content into a selector
-  const loadHTML = async (selector, file) => {
-    const element = document.querySelector(selector);
-    if (element) {
-      const response = await fetch(`assets/${file}`);  // Correct path to fetch files from 'assets' folder
-      if (response.ok) {
-        element.innerHTML = await response.text();
-      } else {
-        console.error(`Failed to load ${file}: ${response.status}`);
-      }
-    }
-  };
+  // Sidebar Toggle functionality for mobile or smaller screens
+  const sidebarToggle = document.querySelector('.sidebar-toggle'); // Sidebar toggle button (for mobile or small screens)
+  const sidebar = document.querySelector('.sidebar');  // Sidebar element
 
-  // Load sidebar and footer into their respective placeholders
-  loadHTML("aside", "assets/sidebar.html");  // Load sidebar from 'assets' folder
-  loadHTML("footer", "assets/footer.html");  // Load footer from 'assets' folder
-
-  // Sidebar Toggle functionality
-  const sidebarToggle = document.querySelector('.sidebar-toggle');
-  const sidebar = document.querySelector('.sidebar');
+  // If sidebar toggle and sidebar exist, add click event to toggle the sidebar visibility
   if (sidebarToggle && sidebar) {
     sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('active'); // Toggle the visibility of the sidebar
+      sidebar.classList.toggle('active'); // Toggle visibility of sidebar (using active class)
     });
   }
 
   // Highlight active link in sidebar
-  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+  const sidebarLinks = document.querySelectorAll('.sidebar-link'); // All sidebar links
   sidebarLinks.forEach(link => {
     link.addEventListener('click', () => {
-      sidebarLinks.forEach(link => link.classList.remove('active'));  // Remove active class from all links
-      link.classList.add('active');  // Add active class to the clicked link
+      // Remove the 'active' class from all links
+      sidebarLinks.forEach(link => link.classList.remove('active'));
+
+      // Add 'active' class to the clicked link to highlight it
+      link.classList.add('active');
     });
   });
 });
