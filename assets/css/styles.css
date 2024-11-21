@@ -246,3 +246,31 @@
   font-size: 14px;
   color: #555;
 }
+
+/* Languages list styling */
+.languages-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.languages-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.languages-list i {
+  margin-right: 10px;
+  color: #007acc;
+  font-size: 18px;
+}
+
+.languages-list b {
+  font-weight: bold;
+  color: #333;
+}
+
+.languages-list li:hover {
+  color: #007acc;
+}
