@@ -20,8 +20,7 @@ body {
 .sidebar {
   width: 250px;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 60px; /* Adjusted for header height */
   bottom: 0;
   background-color: #0056b3;
   color: white;
@@ -69,10 +68,10 @@ body {
   font-size: 1.1rem;
   padding: 1rem;
   display: block;
-  text-align: center;
+  text-align: center; /* Center the text inside each button */
   border-radius: 5px;
   margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .sidebar .sidebar-links li a:hover,
@@ -90,6 +89,7 @@ header {
   width: 100%;
   text-align: center;
   position: relative;
+  top: 0;
 }
 
 header h1 {
@@ -119,9 +119,9 @@ header p.subtitle, header p.tagline {
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* Ensures the content doesn't overlap sidebar */
+  margin-left: 250px; /* Ensuring content doesn't overlap sidebar */
   padding: 2rem;
-  width: calc(100% - 250px); /* Ensures full use of available space */
+  width: calc(100% - 250px); /* Ensuring full use of available space */
   max-width: 900px;
   margin-top: 60px; /* space for header */
   background-color: white;
