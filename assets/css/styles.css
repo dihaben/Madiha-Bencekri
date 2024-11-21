@@ -1,75 +1,93 @@
+/* General Styles */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  display: flex;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
-.container {
-  display: flex;
-  width: 100%;
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 /* Sidebar */
 .sidebar {
-  width: 25%;
-  background-color: #002366;
-  color: #fff;
-  padding: 20px;
+  width: 260px;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #004d99;
+  color: white;
+  position: fixed;
+  padding: 20px;
 }
 
-.profile-section img {
+.sidebar img.profile-pic {
   width: 120px;
+  height: 120px;
   border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-.sidebar h2 {
-  margin: 10px 0;
-}
-
-.sidebar p {
-  font-style: italic;
-}
-
-.menu ul {
+.sidebar ul {
   list-style: none;
   padding: 0;
-  width: 100%;
 }
 
-.menu ul li {
+.sidebar ul li {
   margin: 10px 0;
-  text-align: center;
 }
 
-.menu ul li a {
-  color: #fff;
-  text-decoration: none;
+.sidebar ul li a {
+  color: white;
+  display: flex;
+  align-items: center;
   padding: 10px;
-  display: block;
   border-radius: 5px;
+  transition: background 0.3s;
 }
 
-.menu ul li a.active, .menu ul li a:hover {
-  background-color: #0044cc;
+.sidebar ul li a:hover {
+  background-color: #0066cc;
 }
 
-/* Main Content */
-.main-content {
-  width: 75%;
-  padding: 20px;
+/* Hero Section */
+.hero {
+  background-color: #e6f7ff;
+  padding: 40px;
+  text-align: center;
+  margin: 20px 0;
 }
 
-header h1 {
-  color: #002366;
+.hero h1 {
+  font-size: 2.5rem;
+  color: #004d99;
 }
 
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero .btn {
+  background-color: #0062b9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background-color: #004080;
+}
+
+/* Footer */
 footer {
   text-align: center;
   margin-top: 20px;
-  font-size: 0.9em;
+  font-size: 0.9rem;
   color: #666;
 }
