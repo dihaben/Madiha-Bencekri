@@ -3,97 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to the portfolio of Madiha Bencekri. Explore my work in transportation engineering, urban planning, and smart cities.">
-  <meta name="keywords" content="Portfolio, Madiha Bencekri, Transportation Engineering, Urban Planning, Smart Cities">
-  <meta name="author" content="Madiha Bencekri">
-  <title>Home - Madiha Bencekri</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #0056b3;
+      --secondary-color: #ffd700;
+      --background-color: #f4f4f9;
+      --text-color: #333;
+      --link-hover-color: #ffd700;
+      --font-family: 'Arial', sans-serif;
+      --border-radius: 5px;
+      --transition-duration: 0.3s;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-content {
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 1200px;
+      background-color: #ffffff;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      line-height: 1.6;
+    }
+
+    .main-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      text-align: center;
+    }
+
+    .main-content p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--text-color);
+    }
+
+    .research-expertise,
+    .achievements,
+    .connect-with-me {
+      margin-top: 2rem;
+    }
+
+    .research-expertise h2,
+    .achievements h2,
+    .connect-with-me h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--secondary-color);
+      display: inline-block;
+    }
+
+    .research-expertise ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    .research-expertise ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .connect-with-me a {
+      color: var(--primary-color);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .connect-with-me a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .achievements p {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-color);
+      border-radius: var(--border-radius);
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <div>
-      <h1>Welcome to My Portfolio</h1>
-      <p class="subtitle">Your one-stop destination to explore my work, research, and contributions to transportation engineering, urban planning, and smart cities.</p>
-      <p class="tagline">"Designing sustainable mobility solutions for smarter cities."</p>
-    </div>
-  </header>
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <div class="sidebar-profile">
-      <img src="assets/images/profile.jpg" alt="Madiha Bencekri" class="profile-img">
-      <p class="profile-name">Madiha Bencekri</p>
-      <p class="profile-title">Ph.D. | Research Professor | Transportation Engineering and Smart Cities</p>
-    </div>
-    <ul class="sidebar-links">
-      <li><a href="index.html" class="sidebar-link active">Home</a></li>
-      <li><a href="about.html" class="sidebar-link">About</a></li>
-      <li><a href="education.html" class="sidebar-link">Education</a></li>
-      <li><a href="experience.html" class="sidebar-link">Experience</a></li>
-      <li><a href="publications.html" class="sidebar-link">Publications</a></li>
-      <li><a href="teaching.html" class="sidebar-link">Teaching</a></li>
-      <li><a href="project.html" class="sidebar-link">Project</a></li>
-      <li><a href="resume.html" class="sidebar-link">Resume</a></li>
-      <li><a href="languages.html" class="sidebar-link">Languages</a></li>
-      <li><a href="blog.html" class="sidebar-link">Blog</a></li>
-      <li><a href="contact.html" class="sidebar-link">Contact</a></li>
-    </ul>
-  </div>
-
-<!-- Main Content -->
-<div class="main-content">
-  <h1>Welcome to My Portfolio</h1>
-  <p>
-    Hello! I'm <strong>Madiha Bencekri</strong>, a <em>Ph.D. Assistant Research Professor</em> in <strong>Transportation Engineering</strong> 
-    at the University of Seoul. With a passion for sustainable mobility, smart cities, and innovative urban solutions, 
-    I combine advanced research with practical applications to design future-ready transportation systems.
-  </p>
-  
-  <p>
-    My expertise spans <strong>data analytics</strong>, <strong>machine learning</strong>, and <strong>urban planning</strong>, with a focus on 
-    addressing real-world challenges. From optimizing shared mobility to improving accessibility, my work bridges the gap 
-    between cutting-edge research and its impact on communities.
-  </p>
-
-  <div class="research-expertise">
-    <h2>Research Interests & Expertise</h2>
-    <ul>
-      <li>Innovative transportation systems and urban planning</li>
-      <li>Smart city solutions focusing on sustainability</li>
-      <li>Geographic Information Systems (GIS) and spatial analysis</li>
-      <li>Data-driven modeling using machine learning</li>
-    </ul>
-  </div>
-
-  <div class="achievements">
-    <h2>Recognitions & Achievements</h2>
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Welcome to My Portfolio</h1>
     <p>
-      I am honored to have received several awards, including the <strong>Distinguished Paper Award</strong> 
-      (2024) and the <strong>Smart City Department Scholarship</strong> (2020). My contributions to transportation engineering 
-      have been widely recognized through published research in high-impact journals like 
-      <em>Scientific Reports</em> and <em>Journal of Transport Geography</em>.
+      Hello! I'm <strong>Madiha Bencekri</strong>, a <em>Ph.D. Assistant Research Professor</em> in 
+      <strong>Transportation Engineering</strong> at the University of Seoul. With a passion for sustainable 
+      mobility, smart cities, and innovative urban solutions, I combine advanced research with practical applications 
+      to design future-ready transportation systems.
     </p>
-  </div>
-
-  <div class="connect-with-me">
-    <h2>Connect with Me</h2>
+    
     <p>
-      If you are interested in exploring collaborative opportunities, feel free to reach out via my 
-      <a href="contact.html">contact page</a> or connect with me on 
-      <a href="https://www.linkedin.com/in/madihabencekri" target="_blank">LinkedIn</a>. Let's build the cities of tomorrow, together!
+      My expertise spans <strong>data analytics</strong>, <strong>machine learning</strong>, and 
+      <strong>urban planning</strong>, with a focus on addressing real-world challenges. From optimizing shared mobility 
+      to improving accessibility, my work bridges the gap between cutting-edge research and its impact on communities.
     </p>
+
+    <div class="research-expertise">
+      <h2>Research Interests & Expertise</h2>
+      <ul>
+        <li>Innovative transportation systems and urban planning</li>
+        <li>Smart city solutions focusing on sustainability</li>
+        <li>Geographic Information Systems (GIS) and spatial analysis</li>
+        <li>Data-driven modeling using machine learning</li>
+      </ul>
+    </div>
+
+    <div class="achievements">
+      <h2>Recognitions & Achievements</h2>
+      <p>
+        I am honored to have received several awards, including the <strong>Distinguished Paper Award</strong> 
+        (2024) and the <strong>Smart City Department Scholarship</strong> (2020). My contributions to transportation engineering 
+        have been widely recognized through published research in high-impact journals like 
+        <em>Scientific Reports</em> and <em>Journal of Transport Geography</em>.
+      </p>
+    </div>
+
+    <div class="connect-with-me">
+      <h2>Connect with Me</h2>
+      <p>
+        If you are interested in exploring collaborative opportunities, feel free to reach out via my 
+        <a href="contact.html">contact page</a> or connect with me on 
+        <a href="https://www.linkedin.com/in/madihabencekri" target="_blank">LinkedIn</a>. Let's build the cities of tomorrow, together!
+      </p>
+    </div>
   </div>
-</div>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Madiha Bencekri. All rights reserved.</p>
-    <p><a href="mailto:madihabencekri@example.com">madihabencekri@example.com</a></p>
-    <p><a href="https://scholar.google.com/citations?user=your_actual_id" target="_blank">Google Scholar</a></p>
-  </footer>
-
 </body>
 </html>
