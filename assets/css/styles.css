@@ -15,53 +15,17 @@ body {
   margin: 0;
 }
 
-/* Navbar Styles */
+/* Navbar Styles (Removed from navbar, handled in sidebar) */
 .navbar {
-  background-color: #0056b3;
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-logo {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-}
-
-.navbar-links li {
-  margin: 0 1rem;
-}
-
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar-links a:hover {
-  color: #ffd700; /* Hover effect for navbar links */
+  display: none; /* Removed since we're handling navigation in the sidebar */
 }
 
 /* Sidebar Styles */
 .sidebar {
-  width: 220px; /* Adjusted the sidebar width */
+  width: 250px; /* Sidebar width */
   position: fixed;
   left: 0;
-  top: 60px; /* Adjusted for navbar */
+  top: 60px; /* Adjusted for navbar height */
   bottom: 0;
   background-color: #0056b3;
   color: white;
@@ -70,10 +34,6 @@ body {
   padding: 1rem;
   transition: transform 0.3s ease;
   z-index: 999;
-}
-
-.sidebar.active {
-  transform: translateX(-220px); /* Hide sidebar when active */
 }
 
 .sidebar .sidebar-profile {
@@ -95,6 +55,11 @@ body {
   color: white;
 }
 
+.sidebar .profile-title {
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
 .sidebar .sidebar-links {
   list-style: none;
   padding: 0;
@@ -108,17 +73,20 @@ body {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
+  display: block;
+  padding: 0.5rem 0;
 }
 
-.sidebar .sidebar-links li a:hover {
-  color: #ffd700; /* Hover effect for sidebar links */
+.sidebar .sidebar-links li a:hover,
+.sidebar .sidebar-links li a.active {
+  color: #ffd700; /* Hover effect and active link color */
 }
 
 /* Main Content Styling */
 .main-content {
-  margin-left: 220px; /* Adjusted content for the sidebar width */
+  margin-left: 250px; /* Adjusted content for the sidebar width */
   padding: 2rem;
-  width: 100%;
+  width: calc(100% - 250px); /* Adjust for sidebar width */
   max-width: 900px;
   margin-top: 60px; /* Space for navbar */
   background-color: white;
@@ -127,26 +95,22 @@ body {
   flex-grow: 1;
 }
 
-.welcome-section {
-  margin-bottom: 3rem;
-}
-
-.welcome-section h2 {
-  color: #0056b3;
-  margin-top: 2rem;
-}
-
-.welcome-section ul {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
-
+/* Footer Styles */
 footer {
   text-align: center;
   background-color: #0056b3;
   color: white;
   padding: 1rem;
   margin-top: auto; /* Push footer to the bottom */
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffd700;
 }
 
 /* Mobile-Friendly Sidebar */
@@ -156,7 +120,7 @@ footer {
   }
 
   .sidebar {
-    transform: translateX(-220px); /* Initially hidden */
+    transform: translateX(-250px); /* Initially hidden */
   }
 
   .sidebar.active {
@@ -164,7 +128,8 @@ footer {
   }
 
   .main-content {
-    margin-left: 0; /* No left margin for small screens */
+    margin-left: 0; /* No left margin on mobile */
+    padding: 1rem; /* Reduced padding for small screens */
   }
 
   .navbar-links {
@@ -172,7 +137,7 @@ footer {
   }
 
   .navbar {
-    padding: 0.5rem; /* Reduced padding on mobile */
+    padding: 0.5rem; /* Reduced padding for mobile */
   }
 
   .navbar-container {
