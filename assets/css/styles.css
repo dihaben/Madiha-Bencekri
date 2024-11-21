@@ -13,151 +13,117 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin: 0;
 }
 
 /* Header Styles */
 header {
   background-color: #0056b3;
   color: white;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   text-align: center;
-  position: fixed;
-  top: 0;
-  left: 250px; /* Prevents overlapping with the sidebar */
-  width: calc(100% - 250px); /* Full width minus sidebar */
-  z-index: 999;
 }
 
 header h1 {
   font-size: 2rem;
   color: #ffd700;
-  animation: shine 2s linear infinite;
+  animation: shine 1s linear infinite;
 }
 
-header p.subtitle {
+header p.subtitle, header p.tagline {
   font-size: 1.1rem;
   color: #fff;
-}
-
-header p.tagline {
-  font-size: 1rem;
-  color: #ffd700;
   font-style: italic;
 }
 
 @keyframes shine {
-  0% { color: #ffffff; }
-  50% { color: #ffd700; }
-  100% { color: #ffffff; }
+  0% {
+    color: #ffffff;
+  }
+  50% {
+    color: #ffd700;
+  }
+  100% {
+    color: #ffffff;
+  }
 }
 
 /* Sidebar Styles */
 .sidebar {
   width: 250px;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  bottom: 0;
   background-color: #0056b3;
   color: white;
-  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  z-index: 1000; /* Ensures it is above the main content */
+  padding-top: 60px;
+  padding-left: 10px;
 }
 
 .sidebar-profile {
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem; /* Prevents overlap with the header */
+  margin-bottom: 2rem;
 }
 
 .sidebar-profile .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
+  margin-bottom: 1rem;
   border: 3px solid white;
 }
 
-.sidebar-profile .profile-name {
+.sidebar .profile-name {
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
-  margin-top: 10px;
 }
 
-.sidebar-profile .profile-title {
-  font-size: 0.9rem;
+.sidebar .profile-title {
+  font-size: 1rem;
   color: #f1f1f1;
-  margin-top: 5px;
 }
 
-.sidebar-links {
+.sidebar .sidebar-links {
   list-style: none;
-  width: 100%; /* Ensures buttons fill the width */
   padding: 0;
 }
 
-.sidebar-links li {
-  margin-bottom: 0.5rem; /* Reduced spacing between menu items */
+.sidebar .sidebar-links li {
+  margin-bottom: 1rem;
 }
 
-.sidebar-links li a {
-  display: block;
+.sidebar .sidebar-links li a {
   text-decoration: none;
   color: white;
-  font-size: 1rem;
-  text-align: center;
-  padding: 0.8rem 0;
-  background-color: #0073e6;
-  border-radius: 5px;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.sidebar-links li a:hover,
-.sidebar-links li a.active {
+.sidebar .sidebar-links li a:hover,
+.sidebar .sidebar-links li a.active {
   background-color: #ffd700;
   color: black;
-  transform: scale(1.05); /* Slight pop effect */
 }
 
 /* Main Content Styles */
 .main-content {
   margin-left: 250px;
-  margin-top: 120px; /* Header height */
   padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  width: calc(100% - 250px);
+  max-width: 900px;
+  margin-top: 60px; /* space for header */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;
-  min-height: calc(100vh - 180px); /* Adjust for header and footer */
-}
-
-.main-content h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #333;
-  text-align: center;
-}
-
-.main-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
-  text-align: justify; /* Ensures text is justified */
-  max-width: 800px;
-}
-
-.main-content ul {
-  max-width: 800px;
-  margin: 1rem auto;
-  text-align: left;
+  text-align: center; /* Center content */
+  margin-bottom: 100px;
 }
 
 /* Footer Styles */
@@ -166,10 +132,9 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+  width: 100%;
   position: fixed;
   bottom: 0;
-  left: 250px; /* Prevents overlapping with the sidebar */
-  width: calc(100% - 250px); /* Full width minus sidebar */
 }
 
 footer a {
@@ -181,29 +146,43 @@ footer a:hover {
   color: #ffd700;
 }
 
-/* Responsive Styles */
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: #0056b3;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #004494;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
   .sidebar {
-    position: relative;
     width: 100%;
-    height: auto;
-    padding-top: 10px;
+    position: relative;
+    padding-top: 0;
+    padding-left: 0;
   }
 
   .main-content {
     margin-left: 0;
-    width: 90%;
     padding: 1rem;
-    margin-top: 160px;
-  }
-
-  header {
-    left: 0;
-    width: 100%;
   }
 
   footer {
-    left: 0;
-    width: 100%;
+    position: relative;
+    margin-top: 20px;
   }
 }
