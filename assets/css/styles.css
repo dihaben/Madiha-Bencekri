@@ -1,24 +1,21 @@
-/* Custom Properties for Scalability and Theming */
+/* Custom Properties for Scalability */
 :root {
   --primary-color: #0056b3;
   --secondary-color: #ffd700;
   --background-color: #f4f4f9;
   --text-color: #333;
-  --hover-text-color: #000;
+  --link-hover-color: #ffd700;
   --font-family: 'Arial', sans-serif;
   --border-radius: 5px;
   --transition-duration: 0.3s;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* General Reset & Normalize */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
 }
 
 /* Body & Layout */
@@ -39,8 +36,8 @@ header {
   text-align: center;
   position: fixed;
   top: 0;
-  left: 250px; /* Space for sidebar */
-  width: calc(100% - 250px);
+  left: 250px; /* Space for the sidebar */
+  width: calc(100% - 250px); /* Header avoids overlapping sidebar */
   z-index: 1000;
 }
 
@@ -57,6 +54,7 @@ header p.tagline {
   font-style: italic;
 }
 
+/* Shine Animation */
 @keyframes shine {
   0%, 100% {
     color: #ffffff;
@@ -79,7 +77,6 @@ header p.tagline {
   align-items: center;
   padding-top: 1rem;
   overflow-y: auto;
-  z-index: 999;
 }
 
 .sidebar-profile {
@@ -98,6 +95,12 @@ header p.tagline {
 .sidebar .profile-name {
   font-size: 1.2rem;
   font-weight: bold;
+  color: white;
+}
+
+.sidebar .profile-title {
+  font-size: 1rem;
+  color: #f1f1f1;
 }
 
 .sidebar .sidebar-links {
@@ -124,12 +127,12 @@ header p.tagline {
 
 .sidebar .sidebar-links li a:hover,
 .sidebar .sidebar-links li a.active {
-  background-color: var(--secondary-color);
-  color: var(--hover-text-color);
+  background-color: var(--link-hover-color);
+  color: black;
   transform: scale(1.05);
 }
 
-/* Sidebar Toggle for Mobile */
+/* Sidebar Toggle Button (for Mobile) */
 .sidebar-toggle {
   display: none;
 }
@@ -157,20 +160,25 @@ header p.tagline {
   }
 }
 
-/* Main Content */
+/* Main Content Styles */
 .main-content {
   margin-left: 250px;
-  margin-top: 100px; /* Header height */
-  margin-bottom: 50px; /* Footer height */
+  margin-top: 100px; /* Leave space for the header */
+  margin-bottom: 50px; /* Leave space for the footer */
   padding: 2rem;
-  width: calc(100% - 250px);
+  width: calc(100% - 250px); /* Avoid overlap with sidebar */
   background-color: white;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  text-align: justify;
+  text-align: justify; /* Align text for better readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: calc(100vh - 150px); /* Adjust height for header and footer */
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
   background-color: var(--primary-color);
   color: white;
@@ -178,8 +186,8 @@ footer {
   padding: 1rem;
   position: fixed;
   bottom: 0;
-  left: 250px;
-  width: calc(100% - 250px);
+  left: 250px; /* Leave space for the sidebar */
+  width: calc(100% - 250px); /* Footer avoids overlapping sidebar */
 }
 
 footer a {
@@ -188,10 +196,10 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--secondary-color);
+  color: var(--link-hover-color);
 }
 
-/* Accessibility Enhancements */
+/* Accessibility Improvements */
 .sidebar-links li a:focus {
   outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
