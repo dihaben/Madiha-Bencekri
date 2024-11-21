@@ -1,24 +1,5 @@
-// loader.js - Dynamically loads the sidebar, header, and footer
 document.addEventListener("DOMContentLoaded", () => {
-  // Function to load HTML content into a selector
-  const loadHTML = async (selector, file) => {
-    const element = document.querySelector(selector);
-    if (element) {
-      const response = await fetch(file);
-      if (response.ok) {
-        element.innerHTML = await response.text();
-      } else {
-        console.error(`Failed to load ${file}: ${response.status}`);
-      }
-    }
-  };
-
-  // Load header, sidebar, and footer into their respective placeholders
-  loadHTML("header", "header.html");  // Load header from 'header.html'
-  loadHTML("aside", "sidebar.html");  // Load sidebar from 'sidebar.html'
-  loadHTML("footer", "footer.html");  // Load footer from 'footer.html'
-
-  // Sidebar Toggle functionality (if sidebar exists)
+  // Sidebar Toggle functionality
   const sidebarToggle = document.querySelector('.sidebar-toggle');
   const sidebar = document.querySelector('.sidebar');
   if (sidebarToggle && sidebar) {
