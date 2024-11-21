@@ -19,16 +19,19 @@ description: Welcome to the professional portfolio of Madiha Bencekri, an expert
       <i class="fas fa-graduation-cap"></i>
       <h3>Ph.D. in Transportation Engineering</h3>
       <p>University of Seoul, 2024</p>
+      <a href="education.html" class="btn-link">Read More</a>
     </div>
     <div class="highlight">
       <i class="fas fa-award"></i>
       <h3>Best Researcher Award</h3>
       <p>University of Seoul, 2023</p>
+      <a href="awards.html" class="btn-link">Read More</a>
     </div>
     <div class="highlight">
       <i class="fas fa-project-diagram"></i>
       <h3>Projects</h3>
       <p>Led innovative projects on sustainable mobility and smart city solutions.</p>
+      <a href="projects.html" class="btn-link">Explore Projects</a>
     </div>
   </div>
 </section>
