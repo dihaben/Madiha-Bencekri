@@ -58,7 +58,7 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-  width: 200px; /* Reduced the sidebar width */
+  width: 220px; /* Adjusted the sidebar width */
   position: fixed;
   left: 0;
   top: 60px; /* Adjusted for navbar */
@@ -73,7 +73,7 @@ body {
 }
 
 .sidebar.active {
-  transform: translateX(-200px); /* Hide sidebar when active */
+  transform: translateX(-220px); /* Hide sidebar when active */
 }
 
 .sidebar .sidebar-profile {
@@ -82,15 +82,15 @@ body {
 }
 
 .sidebar .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 3px solid white;
 }
 
 .sidebar .profile-name {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: white;
 }
@@ -114,9 +114,9 @@ body {
   color: #ffd700; /* Hover effect for sidebar links */
 }
 
-/* Main Content Styles */
+/* Main Content Styling */
 .main-content {
-  margin-left: 200px; /* Adjusted content for the sidebar width */
+  margin-left: 220px; /* Adjusted content for the sidebar width */
   padding: 2rem;
   width: 100%;
   max-width: 900px;
@@ -127,7 +127,20 @@ body {
   flex-grow: 1;
 }
 
-/* Footer Styles */
+.welcome-section {
+  margin-bottom: 3rem;
+}
+
+.welcome-section h2 {
+  color: #0056b3;
+  margin-top: 2rem;
+}
+
+.welcome-section ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
 footer {
   text-align: center;
   background-color: #0056b3;
@@ -143,7 +156,7 @@ footer {
   }
 
   .sidebar {
-    transform: translateX(-200px); /* Initially hidden */
+    transform: translateX(-220px); /* Initially hidden */
   }
 
   .sidebar.active {
