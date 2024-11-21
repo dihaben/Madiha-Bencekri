@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadHTML = async (selector, file) => {
     const element = document.querySelector(selector);
     if (element) {
-      const response = await fetch(`assets/${file}`);  // Correct path to fetch files from the 'assets' folder
+      const response = await fetch(`assets/${file}`);  // Correct path to fetch files from 'assets' folder
       if (response.ok) {
         element.innerHTML = await response.text();
       } else {
@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   loadHTML("aside", "sidebar.html");  // Load sidebar from 'assets' folder
   loadHTML("footer", "footer.html");  // Load footer from 'assets' folder
 
-  // Sidebar Toggle functionality (optional, if sidebar exists)
+  // Sidebar Toggle functionality
   const sidebarToggle = document.querySelector('.sidebar-toggle');
   const sidebar = document.querySelector('.sidebar');
   if (sidebarToggle && sidebar) {
     sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('active'); // Toggles visibility of the sidebar
+      sidebar.classList.toggle('active'); // Toggle the visibility of the sidebar
     });
   }
 
