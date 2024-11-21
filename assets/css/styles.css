@@ -16,3 +16,19 @@
 .sidebar.active {
   left: 0;
 }
+
+/* Active link in the sidebar */
+.menu a.active {
+  font-weight: bold;
+  color: #007acc;
+}
+
+/* Awards list styling */
+.main-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.main-content ul li {
+  margin-bottom: 10px;
+}
