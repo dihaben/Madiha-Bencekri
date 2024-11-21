@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Load the navbar, sidebar, and footer into their respective placeholders
-  loadHTML("header", "navbar.html");  // Loads navbar
-  loadHTML("aside", "sidebar.html");  // Loads sidebar
-  loadHTML("footer", "footer.html");  // Loads footer
+  // Load the navbar, sidebar, and footer from the assets folder
+  loadHTML("header", "assets/navbar.html");  // Load navbar
+  loadHTML("aside", "assets/sidebar.html");  // Load sidebar
+  loadHTML("footer", "assets/footer.html");  // Load footer
 
   // Sidebar Toggle functionality (if sidebar exists)
   const sidebarToggle = document.querySelector('.sidebar-toggle');
