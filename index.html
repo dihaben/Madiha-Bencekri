@@ -45,6 +45,93 @@
 
 <!-- Main Content -->
 <div class="main-content">
+  <style>
+    :root {
+      --primary-color: #0056b3;
+      --secondary-color: #ffd700;
+      --background-color: #f4f4f9;
+      --text-color: #333;
+      --link-hover-color: #ffd700;
+      --font-family: 'Arial', sans-serif;
+      --border-radius: 5px;
+      --transition-duration: 0.3s;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--background-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-content {
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 1200px;
+      background-color: #ffffff;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      line-height: 1.6;
+    }
+
+    .main-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary-color);
+      text-align: center;
+    }
+
+    .main-content p {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      color: var(--text-color);
+    }
+
+    .research-expertise,
+    .achievements,
+    .connect-with-me {
+      margin-top: 2rem;
+    }
+
+    .research-expertise h2,
+    .achievements h2,
+    .connect-with-me h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--secondary-color);
+      display: inline-block;
+    }
+
+    .research-expertise ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+    }
+
+    .research-expertise ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .connect-with-me a {
+      color: var(--primary-color);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .connect-with-me a:hover {
+      color: var(--secondary-color);
+      text-decoration: underline;
+    }
+
+    .achievements p {
+      background-color: #f9f9f9;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-color);
+      border-radius: var(--border-radius);
+    }
+  </style>
   <h1>Welcome to My Portfolio</h1>
   <p>
     Hello! I'm <strong>Madiha Bencekri</strong>, a <em>Ph.D. Assistant Research Professor</em> in <strong>Transportation Engineering</strong> 
