@@ -6,11 +6,13 @@
   --box-background-color: #ffffff;
   --text-color: #333;
   --hover-text-color: #000;
-  --font-family: 'Arial', sans-serif;
+  --font-family-sans: 'Arial', sans-serif;
   --font-family-serif: 'Georgia', serif;
   --border-radius: 5px;
   --transition-duration: 0.3s;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --content-padding: 2rem;
+  --content-gap: 1.5rem;
 }
 
 /* General Reset & Normalize */
@@ -25,7 +27,7 @@ html {
 
 /* Body & Layout */
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-family-sans);
   background-color: var(--background-color);
   color: var(--text-color);
   display: flex;
@@ -37,7 +39,7 @@ body {
 header {
   background-color: var(--primary-color);
   color: white;
-  padding: 1rem 2rem;
+  padding: var(--content-padding);
   text-align: center;
   position: fixed;
   top: 0;
@@ -86,14 +88,14 @@ header p.tagline {
 
 .sidebar-profile {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: var(--content-gap);
 }
 
 .sidebar-profile .profile-img {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: var(--content-gap);
   border: 3px solid white;
 }
 
@@ -169,7 +171,7 @@ header p.tagline {
   align-items: center;
   background-color: var(--background-color);
   min-height: calc(100vh - 150px); /* Adjust height for header and footer */
-  padding: 2rem;
+  padding: var(--content-padding);
 }
 
 /* Content Box */
@@ -177,14 +179,14 @@ header p.tagline {
   background-color: var(--box-background-color);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  padding: 3rem;
-  max-width: 800px;
+  padding: var(--content-padding);
+  max-width: 90%; /* Flexible width for smaller screens */
   width: 100%;
   line-height: 1.8;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Adds space between child elements */
+  gap: var(--content-gap);
 }
 
 /* Headings */
@@ -278,10 +280,8 @@ footer {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  left: 250px;
+  padding: var(--content-padding);
+  position: relative;
   width: calc(100% - 250px);
 }
 
