@@ -89,6 +89,7 @@ header {
   padding: 1rem 2rem;
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 header h1 {
@@ -126,7 +127,7 @@ header p.subtitle, header p.tagline {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: justify;
+  text-align: justify; /* Justified text */
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
