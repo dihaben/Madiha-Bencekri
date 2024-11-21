@@ -7,7 +7,6 @@ body {
   color: #333;
 }
 
-/* Sidebar */
 .sidebar {
   width: 250px;
   height: 100vh;
@@ -21,7 +20,6 @@ body {
 
 .sidebar .profile-section {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .sidebar .profile-pic {
@@ -29,11 +27,11 @@ body {
   height: 100px;
   border-radius: 50%;
   border: 3px solid #007acc;
+  margin-bottom: 10px;
 }
 
 .sidebar h1 {
   font-size: 18px;
-  margin-bottom: 5px;
 }
 
 .sidebar p {
@@ -44,7 +42,6 @@ body {
 .sidebar .menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .sidebar .menu li {
@@ -57,21 +54,18 @@ body {
   padding: 10px 15px;
   display: block;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .sidebar .menu a:hover, .sidebar .menu a.active {
   background-color: #007acc;
-  font-weight: bold;
 }
 
-/* Main Content */
 .main-content {
   margin-left: 250px;
   padding: 20px;
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   background-color: #e9ecef;
@@ -81,29 +75,28 @@ body {
 }
 
 .hero h1 {
-  font-size: 32px;
+  font-size: 28px;
   color: #007acc;
 }
 
 .hero p {
-  font-size: 18px;
-  margin: 20px 0;
+  margin: 15px 0;
+  font-size: 16px;
 }
 
 .btn-primary {
   text-decoration: none;
-  padding: 10px 20px;
-  background-color: #007acc;
+  padding: 10px 15px;
   color: white;
+  background-color: #007acc;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .btn-primary:hover {
   background-color: #005f99;
 }
 
-/* Highlights Section */
 .highlights {
   margin-top: 30px;
 }
@@ -114,24 +107,22 @@ body {
 }
 
 .highlight-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .highlight {
-  background: white;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 300px;
 }
 
 .highlight h3 {
-  font-size: 18px;
   color: #007acc;
-}
-
-.highlight p {
-  font-size: 14px;
+  margin-bottom: 10px;
 }
