@@ -3,11 +3,9 @@
   --primary-color: #0056b3;
   --secondary-color: #ffd700;
   --background-color: #f4f4f9;
-  --box-background-color: #ffffff;
   --text-color: #333;
   --hover-text-color: #000;
   --font-family: 'Arial', sans-serif;
-  --font-family-serif: 'Georgia', serif;
   --border-radius: 5px;
   --transition-duration: 0.3s;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -164,113 +162,12 @@ header p.tagline {
   margin-left: 250px;
   margin-top: 100px; /* Header height */
   margin-bottom: 50px; /* Footer height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--background-color);
-  min-height: calc(100vh - 150px); /* Adjust height for header and footer */
   padding: 2rem;
-}
-
-/* Content Box */
-.main-content .content-box {
-  background-color: var(--box-background-color);
+  width: calc(100% - 250px);
+  background-color: white;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  padding: 3rem;
-  max-width: 800px;
-  width: 100%;
-  line-height: 1.8;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem; /* Adds space between child elements */
-}
-
-/* Headings */
-.content-box h1,
-.content-box h2,
-.content-box h3 {
-  font-family: var(--font-family-serif);
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-.content-box h1 {
-  font-size: 2rem;
-}
-
-.content-box h2 {
-  font-size: 1.5rem;
-  color: var(--secondary-color);
-}
-
-.content-box h3 {
-  font-size: 1.25rem;
-}
-
-/* Paragraphs */
-.content-box p {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-  color: var(--text-color);
-}
-
-.content-box p.highlight {
-  background-color: var(--secondary-color);
-  color: var(--hover-text-color);
-  padding: 0.3rem 0.5rem;
-  border-radius: var(--border-radius);
-  display: inline-block;
-  font-weight: bold;
-}
-
-/* Lists */
-.content-box ul {
-  margin: 1rem 0;
-  padding-left: 1.5rem;
-}
-
-.content-box ul li {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  color: var(--primary-color);
-}
-
-/* Links */
-.content-box a {
-  color: var(--primary-color);
-  text-decoration: underline;
-  font-weight: bold;
-  transition: color var(--transition-duration) ease;
-}
-
-.content-box a:hover {
-  color: var(--secondary-color);
-}
-
-/* Buttons */
-.content-box .btn {
-  display: inline-block;
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: var(--border-radius);
-  text-align: center;
-  text-decoration: none;
-  transition: all var(--transition-duration) ease;
-}
-
-.content-box .btn:hover {
-  background-color: var(--secondary-color);
-  color: var(--hover-text-color);
-}
-
-.content-box .btn:focus {
-  outline: 2px solid var(--secondary-color);
-  outline-offset: 2px;
+  text-align: justify;
 }
 
 /* Footer */
