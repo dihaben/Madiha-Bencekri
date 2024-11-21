@@ -15,4 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load the navbar and footer into their respective placeholders
   loadHTML("header", "navbar.html");
   loadHTML("footer", "footer.html");
+
+  // Sidebar Toggle (Optional, if sidebar exists)
+  const sidebarToggle = document.querySelector('.sidebar-toggle');
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  }
 });
