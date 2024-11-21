@@ -8,12 +8,16 @@
   <meta name="author" content="Madiha Bencekri">
   <title>About Me - Madiha Bencekri</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/loader.js" defer></script> <!-- Dynamic Navbar and Footer Loader -->
+  <script src="assets/js/loader.js" defer></script> <!-- Dynamically loads navbar, sidebar, and footer -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
 </head>
 <body>
+
   <!-- Navbar -->
   <header></header> <!-- Dynamically loads navbar.html -->
+
+  <!-- Sidebar -->
+  <aside></aside> <!-- Dynamically loads sidebar.html -->
 
   <!-- Main Content -->
   <div class="main-content">
@@ -32,11 +36,11 @@
   <!-- Footer -->
   <footer></footer> <!-- Dynamically loads footer.html -->
 
-  <!-- Sidebar Toggle (Optional, if needed) -->
+  <!-- Sidebar Toggle Script (Optional, if needed) -->
   <script>
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     const sidebar = document.querySelector('.sidebar');
-    if (sidebarToggle) {
+    if (sidebarToggle && sidebar) {
       sidebarToggle.addEventListener('click', () => {
         sidebar.classList.toggle('active');
       });
