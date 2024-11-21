@@ -120,3 +120,29 @@ h1, h2 {
   margin-bottom: 1.5rem;
 }
 
+/* Education Page Styles */
+.education-list {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.education-list li {
+  margin-bottom: 2rem; /* Space between education items */
+}
+
+.education-list h3 {
+  font-size: 1.5rem;
+  color: #0056b3; /* Primary color for headings */
+  margin-bottom: 0.5rem;
+}
+
+.education-list p {
+  font-size: 1rem;
+  color: #333; /* Text color for descriptions */
+}
+
+.education-list time {
+  font-style: italic;
+  color: #777; /* Subtle color for dates */
+}
