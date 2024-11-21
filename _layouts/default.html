@@ -6,7 +6,7 @@
   <title>{{ page.title }} - {{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <script src="/assets/js/scripts.js"></script>
+  <script src="/assets/js/scripts.js" defer></script>
 </head>
 <body>
   {% include sidebar.html %}
@@ -18,6 +18,3 @@
   </footer>
 </body>
 </html>
-
-
-
