@@ -4,18 +4,16 @@ title: Home
 description: Welcome to the professional portfolio of Madiha Bencekri, an expert in Transportation Engineering, Urban Planning, and Smart Cities.
 ---
 
-<!-- Main Content -->
-<section class="hero">
-  <h1>Welcome to My Portfolio</h1>
+<section class="hero" role="region" aria-labelledby="hero-title">
+  <h1 id="hero-title">Welcome to My Portfolio</h1>
   <p>
     I am an expert in Transportation Engineering, Urban Planning, and Smart Cities with years of experience in academia and industry.
   </p>
-  <a href="about.html" class="btn">Learn More About Me</a>
+  <a href="#highlights" class="btn">Learn More About Me</a>
 </section>
 
-<!-- Highlights Section -->
-<section class="highlights">
-  <h2>Highlights</h2>
+<section class="highlights" role="region" aria-labelledby="highlights-title">
+  <h2 id="highlights-title">Highlights</h2>
   <div class="highlight-grid">
     <div class="highlight">
       <i class="fas fa-graduation-cap"></i>
