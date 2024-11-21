@@ -3,7 +3,7 @@ title: "Madiha Bencekri's Portfolio"
 description: "A professional portfolio showcasing my work, publications, and achievements."
 author: "Madiha Bencekri"
 baseurl: "" # Leave empty for GitHub Pages at the root
-url: "https://dihaben.github.io/Madiha-Bencekri/" # Replace <your-github-username> with your GitHub username
+url: "https://dihaben.github.io/Madiha-Bencekri" # Replace <your-github-username> with your GitHub username
 lang: "en" # Set default language (can be useful for SEO)
 
 # Navigation Menu
