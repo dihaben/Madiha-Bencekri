@@ -1,3 +1,16 @@
+/* Custom Properties for Scalability */
+:root {
+  --primary-color: #0056b3;
+  --secondary-color: #ffd700;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --link-hover-color: #ffd700;
+  --font-family: 'Arial', sans-serif;
+  --border-radius: 5px;
+  --transition-duration: 0.3s;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* General Reset */
 * {
   margin: 0;
@@ -7,9 +20,9 @@
 
 /* Body & Layout */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
   display: flex;
   flex-direction: row;
   min-height: 100vh;
@@ -17,7 +30,7 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #0056b3;
+  background-color: var(--primary-color);
   color: white;
   padding: 1rem 2rem;
   text-align: center;
@@ -30,7 +43,7 @@ header {
 
 header h1 {
   font-size: 2rem;
-  color: #ffd700;
+  color: var(--secondary-color);
   animation: shine 1s linear infinite;
 }
 
@@ -41,15 +54,13 @@ header p.tagline {
   font-style: italic;
 }
 
+/* Shine Animation */
 @keyframes shine {
-  0% {
+  0%, 100% {
     color: #ffffff;
   }
   50% {
-    color: #ffd700;
-  }
-  100% {
-    color: #ffffff;
+    color: var(--secondary-color);
   }
 }
 
@@ -59,12 +70,13 @@ header p.tagline {
   position: fixed;
   top: 0;
   bottom: 0;
-  background-color: #0056b3;
+  background-color: var(--primary-color);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
+  overflow-y: auto;
 }
 
 .sidebar-profile {
@@ -108,16 +120,44 @@ header p.tagline {
   font-size: 1.1rem;
   padding: 0.8rem 1rem;
   display: block;
-  background-color: #0066cc;
-  border-radius: 5px;
-  transition: all 0.3s ease;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-duration) ease;
 }
 
 .sidebar .sidebar-links li a:hover,
 .sidebar .sidebar-links li a.active {
-  background-color: #ffd700;
+  background-color: var(--link-hover-color);
   color: black;
   transform: scale(1.05);
+}
+
+/* Sidebar Toggle Button (for Mobile) */
+.sidebar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    left: -250px;
+    transition: all var(--transition-duration) ease;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .sidebar-toggle {
+    display: block;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2000;
+  }
 }
 
 /* Main Content Styles */
@@ -128,8 +168,8 @@ header p.tagline {
   padding: 2rem;
   width: calc(100% - 250px); /* Avoid overlap with sidebar */
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
   text-align: justify; /* Align text for better readability */
   display: flex;
   flex-direction: column;
@@ -140,7 +180,7 @@ header p.tagline {
 
 /* Footer Styles */
 footer {
-  background-color: #0056b3;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 1rem;
@@ -156,47 +196,19 @@ footer a {
 }
 
 footer a:hover {
-  color: #ffd700;
+  color: var(--link-hover-color);
 }
 
-/* Button Styles for Sidebar */
-.sidebar .sidebar-links li a {
-  background-color: #004494;
-  color: white;
-  border: none;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+/* Accessibility Improvements */
+.sidebar-links li a:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
 
-.sidebar .sidebar-links li a:hover {
-  background-color: #ffd700;
-  color: #333;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    position: relative;
-    padding-top: 0;
-  }
-
-  header {
-    left: 0;
-    width: 100%;
-  }
-
-  footer {
-    left: 0;
-    width: 100%;
-  }
-
-  .main-content {
-    margin-left: 0;
-    width: 100%;
-    padding: 1rem;
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
   }
 }
