@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to the portfolio of Madiha Bencekri. Explore my work in transportation engineering and urban planning.">
+  <meta name="description" content="Welcome to the portfolio of Madiha Bencekri. Explore my work in transportation engineering, urban planning, and smart cities.">
+  <meta name="keywords" content="Portfolio, Madiha Bencekri, Transportation Engineering, Urban Planning, Smart Cities">
+  <meta name="author" content="Madiha Bencekri">
   <title>Home - Madiha Bencekri</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/loader.js" defer></script> <!-- Dynamically loads navbar, sidebar, and footer -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
 </head>
 <body>
 
@@ -19,11 +22,36 @@
   <!-- Main Content -->
   <div class="main-content">
     <h1>Welcome to My Portfolio</h1>
-    <p>I specialize in Transportation Engineering, Urban Planning, and Smart Cities. This portfolio highlights my research, experiences, and projects in the field.</p>
+    <p>
+      Hello! I'm Madiha Bencekri, a Ph.D. researcher in **Transportation Engineering** with a passion for designing sustainable mobility solutions and creating smart cities. My work focuses on innovative transportation systems and urban planning, applying data-driven approaches like machine learning to address real-world mobility challenges.
+    </p>
+    <p>
+      Throughout my career, I have bridged the gap between research and real-world implementation, collaborating with experts and communities to shape future cities. I invite you to explore my projects, research, and experience that contribute to creating more sustainable and efficient urban environments.
+    </p>
+
+    <h2>Research & Expertise</h2>
+    <ul>
+      <li>Transportation systems and planning</li>
+      <li>Smart city solutions and sustainability</li>
+      <li>Data-driven mobility systems using machine learning</li>
+    </ul>
+
+    <h2>Connect with Me</h2>
+    <p>If you're interested in my work or want to collaborate, feel free to get in touch through the contact page or connect with me on LinkedIn.</p>
   </div>
 
   <!-- Footer -->
   <footer></footer> <!-- Dynamically loads footer.html -->
 
+  <!-- Sidebar Toggle Script (Optional, if needed) -->
+  <script>
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebarToggle && sidebar) {
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+    }
+  </script>
 </body>
 </html>
