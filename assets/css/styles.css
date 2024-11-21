@@ -13,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
 }
 
 /* Header Styles */
@@ -22,134 +21,135 @@ header {
   color: white;
   padding: 1.5rem 2rem;
   text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
 }
 
 header h1 {
   font-size: 2rem;
   color: #ffd700;
-  animation: shine 1s linear infinite;
+  animation: shine 2s linear infinite;
 }
 
-header p.subtitle, header p.tagline {
+header p.subtitle {
   font-size: 1.1rem;
   color: #fff;
+}
+
+header p.tagline {
+  font-size: 1rem;
+  color: #ffd700;
   font-style: italic;
 }
 
 @keyframes shine {
-  0% {
-    color: #ffffff;
-  }
-  50% {
-    color: #ffd700;
-  }
-  100% {
-    color: #ffffff;
-  }
+  0% { color: #ffffff; }
+  50% { color: #ffd700; }
+  100% { color: #ffffff; }
 }
 
 /* Sidebar Styles */
 .sidebar {
   width: 250px;
+  height: 100%;
   position: fixed;
-  top: 60px; /* Adjusted for header height */
+  top: 0;
   left: 0;
-  bottom: 0;
   background-color: #0056b3;
   color: white;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
-  padding-top: 2rem;
-  padding-left: 0;
-  z-index: 5;
+  align-items: center;
 }
 
-.sidebar .profile-img {
-  width: 90px;
-  height: 90px;
+.sidebar-profile {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-profile .profile-img {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  margin-bottom: 1rem;
   border: 3px solid white;
-  align-self: center;
 }
 
-.sidebar .profile-name {
+.sidebar-profile .profile-name {
   font-size: 1.2rem;
   font-weight: bold;
   color: white;
-  text-align: center;
+  margin-top: 10px;
 }
 
-.sidebar .profile-title {
-  font-size: 1rem;
+.sidebar-profile .profile-title {
+  font-size: 0.9rem;
   color: #f1f1f1;
-  text-align: center;
+  margin-top: 5px;
 }
 
-.sidebar .sidebar-links {
+.sidebar-links {
   list-style: none;
+  width: 90%; /* Button width */
   padding: 0;
-  margin-top: 1rem;
 }
 
-.sidebar .sidebar-links li {
-  width: 100%;
+.sidebar-links li {
+  margin-bottom: 1rem;
 }
 
-.sidebar .sidebar-links li a {
+.sidebar-links li a {
+  display: block;
   text-decoration: none;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  text-align: center;
   padding: 1rem;
-  display: block;
-  text-align: left;
+  background-color: #0073e6;
   border-radius: 5px;
-  margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.sidebar .sidebar-links li a:hover,
-.sidebar .sidebar-links li a.active {
+.sidebar-links li a:hover,
+.sidebar-links li a.active {
   background-color: #ffd700;
   color: black;
-  transform: scale(1.05); /* Slight scaling on hover */
+  transform: scale(1.05); /* Slight pop effect */
 }
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* Sidebar width */
+  margin-left: 250px;
   padding: 2rem;
-  width: calc(100% - 250px);
-  max-width: 900px;
-  margin-top: 160px; /* space for header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  margin-bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2rem;
+  flex-grow: 1;
+  min-height: calc(100vh - 200px); /* Adjust for header and footer */
 }
 
 .main-content h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
 }
 
 .main-content p {
   font-size: 1.1rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  max-width: 900px;
-  text-align: justify; /* Justify text for neat appearance */
-  width: 100%; /* Make sure text width adjusts well */
+  line-height: 1.8;
+  color: #333;
+  text-align: justify; /* Ensure text is justified */
+  max-width: 800px;
+}
+
+.main-content ul {
+  max-width: 800px;
+  margin: 1rem auto;
+  text-align: left;
 }
 
 /* Footer Styles */
@@ -158,9 +158,9 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  width: 100%;
   position: fixed;
   bottom: 0;
+  width: 100%;
 }
 
 footer a {
@@ -172,44 +172,17 @@ footer a:hover {
   color: #ffd700;
 }
 
-/* Button Styles */
-.btn {
-  display: inline-block;
-  background-color: #0056b3;
-  color: white;
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #004494;
-}
-
-/* Mobile Styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
   .sidebar {
-    width: 100%;
     position: relative;
-    padding-top: 0;
-    padding-left: 0;
+    width: 100%;
+    padding-top: 10px;
   }
 
   .main-content {
     margin-left: 0;
+    width: 90%;
     padding: 1rem;
-    margin-top: 120px; /* Space for header on mobile */
-  }
-
-  footer {
-    position: relative;
-    margin-top: 20px;
   }
 }
