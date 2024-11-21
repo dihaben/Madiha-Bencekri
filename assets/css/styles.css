@@ -20,39 +20,14 @@ body {
 .sidebar {
   width: 250px;
   position: fixed;
-  left: 0;
-  top: 60px;
+  top: 60px; /* Adjusted for header height */
   bottom: 0;
   background-color: #0056b3;
   color: white;
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  z-index: 999;
-}
-
-.sidebar .sidebar-profile {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.sidebar .profile-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid white;
-}
-
-.sidebar .profile-name {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: white;
-}
-
-.sidebar .profile-title {
-  font-size: 1rem;
-  color: #f1f1f1;
+  transition: transform 0.3s ease;
 }
 
 .sidebar .sidebar-links {
@@ -61,55 +36,60 @@ body {
 }
 
 .sidebar .sidebar-links li {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem; /* Reduced space between menu items */
 }
 
 .sidebar .sidebar-links li a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
+  padding: 0.5rem 0;
   display: block;
-  padding: 0.8rem 1rem;
-  background-color: #0056b3;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-align: center;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-.sidebar .sidebar-links li a:hover {
-  background-color: #003f8a;
-  transform: scale(1.05);
+.sidebar .sidebar-links li a:hover,
+.sidebar .sidebar-links li a.active {
+  background-color: #ffd700;
+  color: black;
 }
 
 /* Header Styles */
 header {
   background-color: #0056b3;
   color: white;
-  padding: 1rem 2rem;
-  text-align: center;
-  font-size: 2rem;
+  padding: 0.8rem 2rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  position: relative;
-  z-index: 1;
-  height: 120px; /* Reduced header height */
+  height: 120px; /* Adjusted height */
 }
 
-header .profile-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 3px solid white;
+header .header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header h1 {
   font-size: 2rem;
   animation: shine 1s linear infinite;
+  margin: 0;
 }
 
-/* Shine effect on header text */
+header .subtitle {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  margin-top: 10px;
+}
+
+header .tagline {
+  font-size: 1rem;
+  font-style: italic;
+  color: #ffd700;
+}
+
 @keyframes shine {
   0% {
     color: #ffffff;
@@ -127,47 +107,24 @@ header h1 {
   margin-left: 250px;
   padding: 2rem;
   width: calc(100% - 250px);
-  max-width: 800px;
-  margin-top: 80px;
+  max-width: 900px;
+  margin-top: 60px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
-  margin-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.main-content h1, .main-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-ul {
-  list-style: none;
-  padding-left: 20px;
-}
-
-ul li {
-  margin: 5px 0;
-  font-size: 1.1rem;
-}
-
-p {
-  line-height: 1.6;
-  font-size: 1.1rem;
+  margin-bottom: 100px; /* To push footer down */
 }
 
 /* Footer Styles */
 footer {
-  text-align: center;
   background-color: #0056b3;
   color: white;
+  text-align: center;
   padding: 1rem;
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  position: relative;
 }
 
 footer a {
@@ -193,30 +150,5 @@ footer a:hover {
 }
 
 .btn:hover {
-  background-color: #003f8a;
-}
-
-/* Mobile-Friendly Layout */
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    transform: translateX(-250px); /* Initially hidden */
-  }
-
-  .sidebar.active {
-    transform: translateX(0); /* Show sidebar on toggle */
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 1rem;
-  }
-
-  header {
-    font-size: 1.5rem;
-    padding: 1rem;
-  }
+  background-color: #004494;
 }
