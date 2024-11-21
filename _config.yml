@@ -1,0 +1,42 @@
+# Site Metadata
+title: "Madiha Bencekri's Portfolio"
+description: "A professional portfolio showcasing my work, publications, and achievements."
+baseurl: "" # Leave empty for GitHub Pages at the root
+url: "https://<your-github-username>.github.io" # Replace with your GitHub username
+
+# Navigation Menu
+menu:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about.html"
+  - title: "Education"
+    url: "/education.html"
+  - title: "Experience"
+    url: "/experience.html"
+  - title: "Publications"
+    url: "/publications.html"
+  - title: "Awards"
+    url: "/awards.html"
+  - title: "Languages"
+    url: "/languages.html"
+  - title: "Teaching"
+    url: "/teaching.html"
+  - title: "Projects"
+    url: "/projects.html"
+  - title: "Resume"
+    url: "/resume.html"
+  - title: "Contact"
+    url: "/contact.html"
+  - title: "Blog"
+    url: "/blog.html"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude Files
+exclude:
+  - README.md
+  - node_modules/
