@@ -1,210 +1,72 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the portfolio of Madiha Bencekri. Explore my work in transportation engineering, urban planning, and smart cities.">
+  <meta name="keywords" content="Portfolio, Madiha Bencekri, Transportation Engineering, Urban Planning, Smart Cities">
+  <meta name="author" content="Madiha Bencekri">
+  <title>Home - Madiha Bencekri</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
+</head>
+<body>
 
-/* Body & Layout */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
+  <!-- Header -->
+  <header>
+    <div>
+      <h1>Welcome to My Portfolio</h1>
+      <p class="subtitle">Your one-stop destination to explore my work, research, and contributions to transportation engineering, urban planning, and smart cities.</p>
+      <p class="tagline">"Designing sustainable mobility solutions for smarter cities."</p>
+    </div>
+  </header>
 
-/* Sidebar Styles */
-.sidebar {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #0056b3;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding-top: 2rem;
-  padding-left: 10px;
-}
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-profile">
+      <img src="assets/images/profile.jpg" alt="Madiha Bencekri" class="profile-img">
+      <p class="profile-name">Madiha Bencekri</p>
+      <p class="profile-title">Ph.D. | Research Professor | Transportation Engineering and Smart Cities</p>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="index.html" class="sidebar-link active">Home</a></li>
+      <li><a href="about.html" class="sidebar-link">About</a></li>
+      <li><a href="education.html" class="sidebar-link">Education</a></li>
+      <li><a href="experience.html" class="sidebar-link">Experience</a></li>
+      <li><a href="publications.html" class="sidebar-link">Publications</a></li>
+      <li><a href="teaching.html" class="sidebar-link">Teaching</a></li>
+      <li><a href="project.html" class="sidebar-link">Project</a></li>
+      <li><a href="resume.html" class="sidebar-link">Resume</a></li>
+      <li><a href="languages.html" class="sidebar-link">Languages</a></li>
+      <li><a href="blog.html" class="sidebar-link">Blog</a></li>
+      <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+    </ul>
+  </div>
 
-.sidebar .profile-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid white;
-  align-self: center;
-}
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hello! I'm Madiha Bencekri, a Ph.D. researcher in <strong>Transportation Engineering</strong> with a passion for designing sustainable mobility solutions and creating smart cities. My work focuses on innovative transportation systems and urban planning, applying data-driven approaches like <strong>machine learning</strong> to address real-world mobility challenges.</p>
 
-.sidebar .profile-name {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-}
+    <p>Throughout my career, I have bridged the gap between research and real-world implementation, collaborating with experts and communities to shape future cities. I invite you to explore my projects, research, and experience that contribute to creating more sustainable and efficient urban environments.</p>
 
-.sidebar .profile-title {
-  font-size: 1rem;
-  color: #f1f1f1;
-  text-align: center;
-}
+    <h3>Research & Expertise</h3>
+    <ul>
+      <li>Transportation systems and planning</li>
+      <li>Smart city solutions and sustainability</li>
+      <li>Data-driven mobility systems using machine learning</li>
+    </ul>
 
-.sidebar .sidebar-links {
-  list-style: none;
-  padding: 0;
-  margin-top: 1rem;
-}
+    <h3>Connect with Me</h3>
+    <p>If you're interested in my work or want to collaborate, feel free to get in touch through the <a href="contact.html">contact page</a> or connect with me on <a href="https://www.linkedin.com/in/madihabencekri" target="_blank">LinkedIn</a>.</p>
+  </div>
 
-.sidebar .sidebar-links li {
-  width: 100%;
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Madiha Bencekri. All rights reserved.</p>
+    <p><a href="mailto:madihabencekri@example.com">madihabencekri@example.com</a></p>
+    <p><a href="https://scholar.google.com/citations?user=your_actual_id" target="_blank">Google Scholar</a></p>
+  </footer>
 
-.sidebar .sidebar-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
-  padding: 1rem;
-  display: block;
-  text-align: center;
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.sidebar .sidebar-links li a:hover,
-.sidebar .sidebar-links li a.active {
-  background-color: #ffd700;
-  color: black;
-  transform: scale(1.05); /* Slight scaling on hover */
-}
-
-/* Header Styles */
-header {
-  background-color: #0056b3;
-  color: white;
-  padding: 1rem 2rem;
-  width: 100%;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  color: #ffd700;
-  margin: 0;
-  animation: shine 1s linear infinite;
-}
-
-header p.subtitle, header p.tagline {
-  font-size: 1.1rem;
-  color: #fff;
-  font-style: italic;
-}
-
-@keyframes shine {
-  0% {
-    color: #ffffff;
-  }
-  50% {
-    color: #ffd700;
-  }
-  100% {
-    color: #ffffff;
-  }
-}
-
-/* Main Content Styles */
-.main-content {
-  margin-left: 250px; /* Ensures the content doesn't overlap sidebar */
-  padding: 2rem;
-  width: calc(100% - 250px); /* Ensures full use of available space */
-  max-width: 900px;
-  margin-top: 60px; /* space for header */
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: justify;
-  margin-bottom: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-grow: 1;
-  min-height: calc(100vh - 160px); /* Ensures content takes full height between header and footer */
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.main-content h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.main-content p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #0056b3;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #ffd700;
-}
-
-/* Button Styles */
-.btn {
-  display: inline-block;
-  background-color: #0056b3;
-  color: white;
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #004494;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-    position: relative;
-    padding-top: 0;
-    padding-left: 0;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding: 1rem;
-  }
-
-  footer {
-    position: relative;
-    margin-top: 20px;
-  }
-}
+</body>
+</html>
