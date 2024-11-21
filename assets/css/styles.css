@@ -1,26 +1,59 @@
-/* Sidebar Toggle */
-.sidebar-toggle {
-  background: #003366;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  font-size: 18px;
-  cursor: pointer;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .sidebar {
-    display: none;
-  }
-  .sidebar.active {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    width: 250px;
-    height: 100vh;
-  }
-  .main-content {
-    margin-left: 0;
-  }
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0056b3;
+  padding: 1rem;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-links li {
+  margin: 0 1rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #0056b3;
+  color: white;
+  padding: 1rem;
 }
