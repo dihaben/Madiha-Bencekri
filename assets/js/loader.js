@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Load the navbar, sidebar, and footer from the assets folder
-  loadHTML("header", "assets/navbar.html");  // Load navbar
-  loadHTML("aside", "assets/sidebar.html");  // Load sidebar
-  loadHTML("footer", "assets/footer.html");  // Load footer
+  // Load the navbar, sidebar, and footer from their respective files
+  loadHTML("header", "navbar.html");  // Load navbar
+  loadHTML("aside", "sidebar.html");  // Load sidebar
+  loadHTML("footer", "footer.html");  // Load footer
 
-  // Sidebar Toggle functionality (if sidebar exists)
+  // Sidebar Toggle functionality
   const sidebarToggle = document.querySelector('.sidebar-toggle');
   const sidebar = document.querySelector('.sidebar');
   if (sidebarToggle && sidebar) {
