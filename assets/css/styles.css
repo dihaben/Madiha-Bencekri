@@ -123,10 +123,11 @@ header p.tagline {
 /* Main Content Styles */
 .main-content {
   margin-left: 250px;
+  margin-right: 20px; /* Added right margin for spacing */
   margin-top: 100px; /* Space for header */
   margin-bottom: 50px; /* Space for footer */
   padding: 2rem;
-  width: calc(100% - 250px); /* Avoid overlap with sidebar */
+  width: calc(100% - 270px); /* Adjusted for left and right margins */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -177,8 +178,9 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .main-content {
-    margin-left: 0; /* Sidebar collapses */
-    width: 100%;
+    margin-left: 10px; /* Adjusted for smaller screens */
+    margin-right: 10px; /* Symmetrical spacing */
+    width: calc(100% - 20px); /* Adjusted for margins */
     margin-top: 80px; /* Adjusted for header */
     margin-bottom: 20px; /* Adjusted for footer */
     padding: 1rem;
