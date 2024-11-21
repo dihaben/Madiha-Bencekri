@@ -1,11 +1,9 @@
-// Sidebar toggle for mobile
+// Add Sidebar Active Class
 document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.querySelector(".sidebar-toggle");
-  const sidebar = document.querySelector(".sidebar");
-
-  if (toggleButton) {
-    toggleButton.addEventListener("click", function () {
-      sidebar.classList.toggle("active");
-    });
-  }
+  const links = document.querySelectorAll('.menu a');
+  links.forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
 });
