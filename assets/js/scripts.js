@@ -1,14 +1,22 @@
 // Sidebar Toggle Functionality
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 const sidebar = document.querySelector('.sidebar');
+const overlay = document.querySelector('.sidebar-overlay');
 
-if (sidebarToggle && sidebar) {
+if (sidebarToggle && sidebar && overlay) {
   sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('active');
+    overlay.classList.toggle('visible');
 
-    // Toggle the aria-expanded attribute for accessibility
     const expanded = sidebarToggle.getAttribute('aria-expanded') === 'true';
     sidebarToggle.setAttribute('aria-expanded', !expanded);
+  });
+
+  // Close sidebar when clicking on the overlay
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('visible');
+    sidebarToggle.setAttribute('aria-expanded', false);
   });
 }
 
@@ -61,30 +69,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-// Highlight Sidebar Section on Scroll
-const sections = document.querySelectorAll('.main-content h1, .main-content h2');
-const observerOptions = {
-  root: null,
-  threshold: 0.5
-};
-
-const observerCallback = (entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.id;
-      document.querySelectorAll('.menu a').forEach(link => {
-        if (link.getAttribute('href').includes(`#${id}`)) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-    }
-  });
-};
-
-if (sections.length) {
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-  sections.forEach(section => observer.observe(section));
-}
