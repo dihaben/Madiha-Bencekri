@@ -72,6 +72,8 @@ body {
   border-radius: 5px;
   margin-bottom: 0.5rem;
   transition: background-color 0.3s ease;
+  width: 100%;
+  text-align: center; /* Align text inside the button */
 }
 
 .sidebar .sidebar-links li a:hover,
@@ -120,17 +122,17 @@ header p.subtitle, header p.tagline {
   padding: 2rem;
   width: calc(100% - 250px);
   max-width: 900px;
-  margin-top: 60px;
+  margin-top: 60px; /* Space for header */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
   margin-bottom: 100px;
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: flex-start; /* Align content to the top */
+  justify-content: center;
+  align-items: flex-start;
   flex-grow: 1;
-  min-height: calc(100vh - 160px); /* Ensure content fills screen height between header and footer */
+  min-height: calc(100vh - 160px); /* Ensure content takes full height between header and footer */
   padding-right: 20px; /* Prevent content from being too close to the right side */
 }
 
