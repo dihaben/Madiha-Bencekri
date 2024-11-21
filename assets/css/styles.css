@@ -57,3 +57,66 @@ h1, h2 {
   color: white;
   padding: 1rem;
 }
+
+/* Contact Page Styles */
+
+/* Contact Links */
+.contact-links ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.contact-links ul li {
+  margin-bottom: 1rem; /* Space between items */
+}
+
+.contact-links ul li a {
+  text-decoration: none; /* Remove underline */
+  font-size: 1.2rem;
+  color: #0056b3; /* Match your portfolio's color scheme */
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-links ul li a:hover {
+  color: #003f8a; /* Darker shade for hover effect */
+}
+
+.contact-links ul li a i {
+  margin-right: 0.5rem; /* Space between icon and text */
+  font-size: 1.5rem; /* Slightly larger icon size */
+}
+
+/* LinkedIn Articles Button */
+.btn {
+  display: inline-block;
+  background-color: #0056b3; /* Button background color */
+  color: #ffffff; /* Button text color */
+  text-decoration: none; /* Remove underline */
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.btn:hover {
+  background-color: #004494; /* Darker shade on hover */
+}
+
+/* Page Header */
+.main-content h1 {
+  font-size: 2rem;
+  color: #0056b3;
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
