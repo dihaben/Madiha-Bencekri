@@ -143,3 +143,33 @@
   font-weight: bold;
   color: #007acc;
 }
+
+/* Experience list styling */
+.experience-list {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-list li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.experience-list h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #007acc;
+}
+
+.experience-list p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Highlight active link */
+.menu a.active {
+  font-weight: bold;
+  color: #007acc;
+}
