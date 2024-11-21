@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  justify-content: flex-start;
 }
 
 /* Sidebar Styles */
@@ -38,7 +39,7 @@ body {
 }
 
 .sidebar .sidebar-links li {
-  margin-bottom: 1rem; /* Reduced space between menu items */
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -72,10 +73,11 @@ header {
   justify-content: center;
   height: 120px; /* Adjusted height */
   text-align: center;
+  position: relative;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   animation: shine 1.5s linear infinite;
   margin: 0;
 }
@@ -116,6 +118,9 @@ header .tagline {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
   margin-bottom: 100px; /* To push footer down */
+  text-align: center;
+  padding: 3rem;
+  width: 90%; /* Make sure it's more flexible for different screens */
 }
 
 /* Footer Styles */
