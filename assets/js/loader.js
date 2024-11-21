@@ -1,4 +1,4 @@
-// Dynamically load the navbar and footer
+// loader.js - Dynamically loads the navbar and footer
 document.addEventListener("DOMContentLoaded", () => {
   const loadHTML = async (selector, file) => {
     const element = document.querySelector(selector);
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Load components
-  loadHTML("header", "components/navbar.html");
-  loadHTML("footer", "components/footer.html");
+  // Load the navbar and footer into their respective placeholders
+  loadHTML("header", "navbar.html");
+  loadHTML("footer", "footer.html");
 });
