@@ -7,8 +7,8 @@
 
 /* Body & Layout */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif; /* Improved readability */
+  background-color: #f9f9f9;
   color: #333;
   display: flex;
   flex-direction: column;
@@ -16,54 +16,40 @@ body {
   margin: 0;
 }
 
-/* Header Styles */
+/* Header */
 header {
-  background-color: #0056b3;
+  background-color: #0077b6; /* Lighter, more readable header */
   color: white;
-  padding: 3rem 2rem;
+  padding: 1.5rem 2rem;
   text-align: center;
-  width: 100%;
+  font-size: 2.5rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
 header p {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-header .header-quote {
-  font-style: italic;
-  font-size: 1.5rem;
-  color: #ffd700;
-  animation: blink 2s infinite alternate;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  font-weight: normal;
+  margin-top: 0;
+  color: #ffcc00; /* Lighter, visible text */
 }
 
 /* Sidebar Styles */
 .sidebar {
-  width: 250px;
+  width: 220px; /* Reduced width */
   position: fixed;
-  top: 0;
   left: 0;
+  top: 80px; /* Adjusted to fit header */
   bottom: 0;
-  background-color: #0056b3;
+  background-color: #005f73; /* Darker sidebar for contrast */
   color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  z-index: 999;
+  padding: 2rem;
+  transition: transform 0.3s ease;
 }
 
 .sidebar .sidebar-profile {
@@ -72,22 +58,21 @@ header .header-quote {
 }
 
 .sidebar .profile-img {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 3px solid white;
 }
 
 .sidebar .profile-name {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: white;
 }
 
 .sidebar .profile-title {
-  font-size: 1rem;
-  color: #f1f1f1;
+  font-size: 1.1rem;
+  color: #ddd;
 }
 
 .sidebar .sidebar-links {
@@ -96,51 +81,56 @@ header .header-quote {
 }
 
 .sidebar .sidebar-links li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .sidebar .sidebar-links li a {
   text-decoration: none;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: block;
   padding: 0.5rem 0;
+  transition: color 0.3s ease;
 }
 
-.sidebar .sidebar-links li a:hover,
+.sidebar .sidebar-links li a:hover {
+  color: #ffd700; /* Bright hover effect */
+}
+
 .sidebar .sidebar-links li a.active {
-  color: #ffd700;
+  color: #ffd700; /* Active link color */
 }
 
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px;
-  padding: 2rem;
-  max-width: 900px;
-  margin-top: 60px;
+  margin-left: 250px; /* Adjusted for sidebar width */
+  padding: 2rem 3rem;
+  max-width: 1100px;
+  margin-top: 80px; /* Space for header */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
-  margin-left: 20px; /* smaller margins */
-  margin-right: 20px; /* smaller margins */
+  line-height: 1.8;
 }
 
-/* Button Styles */
-.btn {
-  display: inline-block;
-  background-color: #0056b3;
-  color: white;
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+.main-content h1 {
+  font-size: 2.5rem;
+  color: #0056b3;
 }
 
-.btn:hover {
-  background-color: #004494;
+.main-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.main-content ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.main-content ul li {
+  font-size: 1.1rem;
 }
 
 /* Footer Styles */
@@ -148,9 +138,8 @@ footer {
   text-align: center;
   background-color: #0056b3;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   margin-top: auto;
-  width: 100%;
 }
 
 footer a {
@@ -167,14 +156,15 @@ footer a:hover {
   margin-right: 0.5rem;
 }
 
-/* Mobile-Friendly Styles */
+/* Mobile-Friendly Sidebar */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
   }
 
   .sidebar {
-    transform: translateX(-250px);
+    width: 200px;
+    transform: translateX(-200px);
   }
 
   .sidebar.active {
@@ -183,6 +173,15 @@ footer a:hover {
 
   .main-content {
     margin-left: 0;
-    padding: 1rem;
+    padding: 1.5rem;
   }
+
+  header {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
