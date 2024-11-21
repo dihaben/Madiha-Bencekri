@@ -122,8 +122,13 @@ header p.subtitle, header p.tagline {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center content */
+  text-align: left;
   margin-bottom: 100px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: flex-start; /* Align content to the top */
+  flex-grow: 1;
+  min-height: calc(100vh - 160px); /* Make sure content takes full height between header and footer */
 }
 
 /* Footer Styles */
