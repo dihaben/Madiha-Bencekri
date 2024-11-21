@@ -7,30 +7,62 @@
 
 /* Body & Layout */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background-color: #f4f4f9;
   color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  justify-content: flex-start;
-  align-items: center; /* Center the body content */
+}
+
+/* Header Styles */
+header {
+  background-color: #0056b3;
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+header .header-quote {
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #ffd700;
+  animation: blink 2s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Sidebar Styles */
 .sidebar {
   width: 250px;
   position: fixed;
+  top: 0;
   left: 0;
-  top: 60px;
   bottom: 0;
   background-color: #0056b3;
   color: white;
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  transition: transform 0.3s ease;
   z-index: 999;
 }
 
@@ -73,91 +105,25 @@ body {
   font-size: 1.2rem;
   display: block;
   padding: 0.5rem 0;
-  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar .sidebar-links li a:hover,
 .sidebar .sidebar-links li a.active {
   color: #ffd700;
-  transform: scale(1.05); /* Hover effect with slight scale */
-}
-
-/* Header Styles (Shiny and Blinking Effect) */
-header {
-  background-color: #0056b3;
-  padding: 3rem 0;
-  color: white;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  animation: shine 2s infinite alternate, blink 3s infinite step-start; /* Slower blink */
-}
-
-header p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-@keyframes shine {
-  0% {
-    text-shadow: 0 0 15px #ffd700, 0 0 30px #ffd700, 0 0 45px #ffd700;
-  }
-  100% {
-    text-shadow: 0 0 30px #ffffff, 0 0 50px #ffffff, 0 0 70px #ffffff;
-  }
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 /* Main Content Styles */
 .main-content {
   margin-left: 250px;
   padding: 2rem;
-  width: calc(100% - 250px);
   max-width: 900px;
   margin-top: 60px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   flex-grow: 1;
-  text-align: center;
-  line-height: 1.6; /* Improved readability */
-}
-
-h1, h2 {
-  font-size: 2rem;
-  color: #0056b3;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #555;
-  margin: 1rem 0;
-}
-
-ul {
-  padding-left: 1.5rem;
-  list-style: disc;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-li {
-  margin-bottom: 0.8rem;
+  margin-left: 20px; /* smaller margins */
+  margin-right: 20px; /* smaller margins */
 }
 
 /* Button Styles */
@@ -170,12 +136,11 @@ li {
   border-radius: 5px;
   font-size: 1rem;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #004494;
-  transform: scale(1.05); /* Scale effect for hover */
 }
 
 /* Footer Styles */
@@ -185,6 +150,7 @@ footer {
   color: white;
   padding: 1rem;
   margin-top: auto;
+  width: 100%;
 }
 
 footer a {
@@ -196,7 +162,12 @@ footer a:hover {
   color: #ffd700;
 }
 
-/* Mobile-Friendly Sidebar */
+/* Font Awesome Icons */
+.fas, .fab {
+  margin-right: 0.5rem;
+}
+
+/* Mobile-Friendly Styles */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -213,18 +184,5 @@ footer a:hover {
   .main-content {
     margin-left: 0;
     padding: 1rem;
-  }
-
-  .navbar-links {
-    display: none;
-  }
-
-  .navbar {
-    padding: 0.5rem;
-  }
-
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
   }
 }
