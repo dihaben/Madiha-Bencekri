@@ -4,8 +4,15 @@ title: Home
 description: Welcome to the professional portfolio of Madiha Bencekri, an expert in Transportation Engineering, Urban Planning, and Smart Cities.
 ---
 
+<!-- Sidebar Toggle Button -->
+<button class="sidebar-toggle" aria-label="Toggle sidebar">☰ Menu</button>
+
+<!-- Sidebar -->
+{% include sidebar.html %}
+
 <!-- Main Content -->
 <div class="main-content">
+  <!-- Hero Section -->
   <section class="hero">
     <h1>Welcome to My Portfolio</h1>
     <p>
