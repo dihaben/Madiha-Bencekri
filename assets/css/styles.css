@@ -174,9 +174,12 @@ footer a:hover {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  body {
-    flex-direction: column;
+  .main-content {
+    margin-left: 0;
+    width: 100%;
   }
+}
+
 
   .sidebar {
     width: 100%;
