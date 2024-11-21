@@ -15,16 +15,6 @@ body {
   margin: 0;
 }
 
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-h1, h2 {
-  color: #0056b3;
-  margin-bottom: 1rem;
-}
-
 /* Navbar Styles */
 .navbar {
   background-color: #0056b3;
@@ -68,7 +58,7 @@ h1, h2 {
 
 /* Sidebar Styles */
 .sidebar {
-  width: 250px;
+  width: 200px; /* Reduced the sidebar width */
   position: fixed;
   left: 0;
   top: 60px; /* Adjusted for navbar */
@@ -83,7 +73,7 @@ h1, h2 {
 }
 
 .sidebar.active {
-  transform: translateX(-250px); /* Hide sidebar when active */
+  transform: translateX(-200px); /* Hide sidebar when active */
 }
 
 .sidebar .sidebar-profile {
@@ -92,15 +82,15 @@ h1, h2 {
 }
 
 .sidebar .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 3px solid white;
 }
 
 .sidebar .profile-name {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: white;
 }
@@ -124,9 +114,9 @@ h1, h2 {
   color: #ffd700; /* Hover effect for sidebar links */
 }
 
-/* Main Content Styling */
+/* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* Offset content to the right to account for sidebar */
+  margin-left: 200px; /* Adjusted content for the sidebar width */
   padding: 2rem;
   width: 100%;
   max-width: 900px;
@@ -134,8 +124,10 @@ h1, h2 {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+  flex-grow: 1;
 }
 
+/* Footer Styles */
 footer {
   text-align: center;
   background-color: #0056b3;
@@ -151,7 +143,7 @@ footer {
   }
 
   .sidebar {
-    transform: translateX(-250px); /* Initially hidden */
+    transform: translateX(-200px); /* Initially hidden */
   }
 
   .sidebar.active {
