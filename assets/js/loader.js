@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Load sidebar and footer into their respective placeholders
-  loadHTML("aside", "sidebar.html");  // Load sidebar from 'assets' folder
-  loadHTML("footer", "footer.html");  // Load footer from 'assets' folder
+  loadHTML("aside", "assets/sidebar.html");  // Load sidebar from 'assets' folder
+  loadHTML("footer", "assets/footer.html");  // Load footer from 'assets' folder
 
   // Sidebar Toggle functionality
   const sidebarToggle = document.querySelector('.sidebar-toggle');
