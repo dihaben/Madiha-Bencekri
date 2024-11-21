@@ -8,43 +8,52 @@
   <meta name="author" content="Madiha Bencekri">
   <title>About Me - Madiha Bencekri</title>
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/loader.js" defer></script> <!-- Dynamically loads navbar, sidebar, and footer -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header></header> <!-- Dynamically loads navbar.html -->
-
   <!-- Sidebar -->
-  <aside></aside> <!-- Dynamically loads sidebar.html -->
+  <div class="sidebar">
+    <div class="sidebar-profile">
+      <img src="assets/images/profile.jpg" alt="Madiha Bencekri" class="profile-img">
+      <p class="profile-name">Madiha Bencekri</p>
+      <p class="profile-title">Ph.D. | Research Professor | Transportation Engineering and Smart Cities</p>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="index.html" class="sidebar-link">Home</a></li>
+      <li><a href="about.html" class="sidebar-link active">About</a></li>
+      <li><a href="education.html" class="sidebar-link">Education</a></li>
+      <li><a href="experience.html" class="sidebar-link">Experience</a></li>
+      <li><a href="publications.html" class="sidebar-link">Publications</a></li>
+      <li><a href="teaching.html" class="sidebar-link">Teaching</a></li>
+      <li><a href="project.html" class="sidebar-link">Project</a></li>
+      <li><a href="resume.html" class="sidebar-link">Resume</a></li>
+      <li><a href="languages.html" class="sidebar-link">Languages</a></li>
+      <li><a href="blog.html" class="sidebar-link">Blog</a></li>
+      <li><a href="contact.html" class="sidebar-link">Contact</a></li>
+    </ul>
+  </div>
 
   <!-- Main Content -->
   <div class="main-content">
     <h1>About Me</h1>
     <p>
-      Hello! My name is Madiha Bencekri. I hold a Ph.D. in Transportation Engineering and have a passion for designing sustainable mobility solutions and smart cities. With extensive experience in academia and industry, I bridge the gap between innovative research and real-world implementation.
+      Hello! My name is Madiha Bencekri. I hold a Ph.D. in **Transportation Engineering** with a passion for designing sustainable mobility solutions and creating smart cities. With extensive experience in both academia and industry, I bridge the gap between innovative research and real-world implementation.
     </p>
     <p>
-      My expertise lies in transportation systems, urban planning, and leveraging data-driven approaches like machine learning to tackle mobility challenges.
+      My expertise lies in **transportation systems**, **urban planning**, and leveraging **data-driven approaches** like **machine learning** to address mobility challenges. I aim to develop strategies that make cities smarter, greener, and more efficient.
     </p>
     <p>
-      I am dedicated to fostering collaboration, mentoring students, and creating equitable urban mobility systems. Thank you for visiting my portfolio!
+      In addition to my work, I am deeply committed to fostering collaboration, mentoring students, and working towards **equitable urban mobility systems**. Thank you for visiting my portfolio, and I look forward to connecting with you!
     </p>
   </div>
 
   <!-- Footer -->
-  <footer></footer> <!-- Dynamically loads footer.html -->
+  <footer>
+    <p>&copy; 2024 Madiha Bencekri. All rights reserved.</p>
+    <p><a href="mailto:madihabencekri@example.com">madihabencekri@example.com</a></p>
+    <p><a href="https://scholar.google.com/citations?user=your_actual_id" target="_blank">Google Scholar</a></p>
+  </footer>
 
-  <!-- Sidebar Toggle Script (Optional, if needed) -->
-  <script>
-    const sidebarToggle = document.querySelector('.sidebar-toggle');
-    const sidebar = document.querySelector('.sidebar');
-    if (sidebarToggle && sidebar) {
-      sidebarToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('active');
-      });
-    }
-  </script>
 </body>
 </html>
