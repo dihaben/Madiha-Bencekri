@@ -1,9 +1,11 @@
 // loader.js - Dynamically loads the sidebar and footer
 document.addEventListener("DOMContentLoaded", () => {
-  const sidebarToggle = document.querySelector('.sidebar-toggle');
+  // Ensure sidebar and footer are already in the HTML, no need for dynamic loading
   const sidebar = document.querySelector('.sidebar');
+  const footer = document.querySelector('footer');
 
   // Sidebar Toggle functionality
+  const sidebarToggle = document.querySelector('.sidebar-toggle');
   if (sidebarToggle && sidebar) {
     sidebarToggle.addEventListener('click', () => {
       sidebar.classList.toggle('active'); // Toggle the visibility of the sidebar
