@@ -1,4 +1,4 @@
-// loader.js - Dynamically loads the navbar, sidebar, and footer
+// loader.js - Dynamically loads the sidebar and footer
 document.addEventListener("DOMContentLoaded", () => {
   const loadHTML = async (selector, file) => {
     const element = document.querySelector(selector);
@@ -12,12 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Load the navbar, sidebar, and footer from their respective files
-  loadHTML("header", "navbar.html");  // Load navbar
+  // Load sidebar and footer into their respective placeholders
   loadHTML("aside", "sidebar.html");  // Load sidebar
   loadHTML("footer", "footer.html");  // Load footer
 
-  // Sidebar Toggle functionality
+  // Sidebar Toggle functionality (optional, if sidebar exists)
   const sidebarToggle = document.querySelector('.sidebar-toggle');
   const sidebar = document.querySelector('.sidebar');
   if (sidebarToggle && sidebar) {
@@ -25,4 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
       sidebar.classList.toggle('active');
     });
   }
+
+  // Highlight active link in sidebar
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+  sidebarLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      sidebarLinks.forEach(link => link.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
 });
