@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Learn more about Madiha Bencekri, a Ph.D. researcher with expertise in transportation engineering, sustainable mobility, and smart city planning.">
+  <meta name="keywords" content="Transportation Engineering, Urban Planning, Sustainable Mobility, Smart Cities">
+  <meta name="author" content="Madiha Bencekri">
   <title>About Me - Madiha Bencekri</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/loader.js" defer></script> <!-- Dynamic Navbar and Footer Loader -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
 </head>
 <body>
+  <!-- Navbar -->
+  <header></header> <!-- Dynamically loads navbar.html -->
+
   <!-- Main Content -->
   <div class="main-content">
     <h1>About Me</h1>
@@ -18,15 +24,23 @@
     <p>
       My expertise lies in transportation systems, urban planning, and leveraging data-driven approaches like machine learning to tackle mobility challenges.
     </p>
+    <p>
+      I am dedicated to fostering collaboration, mentoring students, and creating equitable urban mobility systems. Thank you for visiting my portfolio!
+    </p>
   </div>
 
-  <!-- JavaScript for Sidebar Toggle -->
+  <!-- Footer -->
+  <footer></footer> <!-- Dynamically loads footer.html -->
+
+  <!-- Sidebar Toggle (Optional, if needed) -->
   <script>
     const sidebarToggle = document.querySelector('.sidebar-toggle');
     const sidebar = document.querySelector('.sidebar');
-    sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
-    });
+    if (sidebarToggle) {
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+    }
   </script>
 </body>
 </html>
