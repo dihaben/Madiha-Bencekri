@@ -12,15 +12,18 @@
   <meta name="author" content="{{ site.author }}">
 
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <script src="/assets/js/scripts.js" defer></script>
 </head>
 <body>
-  <!-- Sidebar Toggle Button (for responsive design) -->
+  <!-- Sidebar Toggle Button -->
   <button class="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="false">☰ Menu</button>
 
   <!-- Sidebar -->
   {% include sidebar.html %}
+
+  <!-- Sidebar Overlay -->
+  <div class="sidebar-overlay"></div>
 
   <!-- Main Content -->
   <div class="main-content">
