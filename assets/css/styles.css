@@ -1,23 +1,33 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f4f4f9;
   color: #333;
+  display: flex;
+  min-height: 100vh;
+  margin: 0;
 }
 
+/* Container Styles */
 .container {
   width: 90%;
   margin: 0 auto;
 }
 
+/* Header & Section Titles */
 h1, h2 {
   color: #0056b3;
   margin-bottom: 1rem;
 }
 
-/* Navbar */
+/* Navbar Styles */
 .navbar {
   background-color: #0056b3;
   padding: 1rem;
@@ -50,7 +60,57 @@ h1, h2 {
   font-weight: bold;
 }
 
-/* Footer */
+.navbar-links a:hover {
+  color: #ffd700; /* Hover effect for navbar links */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #0056b3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+  transform: translateX(-250px); /* Hide sidebar when active */
+}
+
+.sidebar .sidebar-links {
+  list-style: none;
+}
+
+.sidebar .sidebar-links li {
+  margin-bottom: 1rem;
+}
+
+.sidebar .sidebar-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.sidebar .sidebar-links li a:hover {
+  color: #ffd700; /* Hover effect for sidebar links */
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 250px; /* Offset content to the right to account for sidebar */
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 60px; /* Space for navbar */
+}
+
+/* Footer Styles */
 .footer {
   text-align: center;
   background-color: #0056b3;
@@ -107,161 +167,31 @@ h1, h2 {
   background-color: #004494; /* Darker shade on hover */
 }
 
-/* Page Header */
-.main-content h1 {
-  font-size: 2rem;
-  color: #0056b3;
-  margin-bottom: 1rem;
-}
-
-.main-content p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
 /* Education Page Styles */
-.education-list {
+.education-list, .experience-list {
   list-style: none; /* Remove bullets */
   padding: 0;
   margin: 2rem 0;
 }
 
-.education-list li {
-  margin-bottom: 2rem; /* Space between education items */
+.education-list li, .experience-list li {
+  margin-bottom: 2rem; /* Space between items */
 }
 
-.education-list h3 {
+.education-list h3, .experience-list h3 {
   font-size: 1.5rem;
   color: #0056b3; /* Primary color for headings */
   margin-bottom: 0.5rem;
 }
 
-.education-list p {
+.education-list p, .experience-list p {
   font-size: 1rem;
   color: #333; /* Text color for descriptions */
 }
 
-.education-list time {
+.education-list time, .experience-list time {
   font-style: italic;
   color: #777; /* Subtle color for dates */
-}
-/* Experience Page Styles */
-.experience-list {
-  list-style: none; /* Remove bullets */
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.experience-list li {
-  margin-bottom: 2rem; /* Space between roles */
-}
-
-.experience-list h3 {
-  font-size: 1.5rem;
-  color: #0056b3; /* Primary color for headings */
-  margin-bottom: 0.5rem;
-}
-
-.experience-list p {
-  font-size: 1rem;
-  color: #333; /* Text color for descriptions */
-}
-
-.experience-list time {
-  font-style: italic;
-  color: #777; /* Subtle color for dates */
-}
-
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  min-height: 100vh;
-  background-color: #f4f4f9;
-}
-
-/* Sidebar Styles */
-.sidebar {
-  width: 250px;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  background-color: #0056b3;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.sidebar.active {
-  transform: translateX(-250px); /* Hide sidebar when active */
-}
-
-.sidebar .sidebar-links {
-  list-style: none;
-}
-
-.sidebar .sidebar-links li {
-  margin-bottom: 1rem;
-}
-
-.sidebar .sidebar-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-}
-
-.sidebar .sidebar-links li a:hover {
-  color: #ffd700; /* Hover effect for sidebar links */
-}
-
-/* Navbar Styles */
-header {
-  background-color: #0056b3;
-  padding: 1rem;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-links {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.navbar-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar-links a:hover {
-  color: #ffd700; /* Hover effect for navbar links */
-}
-
-/* Main Content Styling */
-.main-content {
-  margin-left: 250px; /* Offset content to the right to account for sidebar */
-  padding: 2rem;
-  width: 100%;
-  max-width: 900px;
-  margin-top: 60px; /* Space for navbar */
 }
 
 /* Mobile-Friendly Sidebar */
@@ -275,6 +205,10 @@ header {
   }
 
   .main-content {
-    margin-left: 0;
+    margin-left: 0; /* Adjust content for mobile screens */
+  }
+
+  .navbar-links {
+    display: none; /* Hide navbar on small screens */
   }
 }
