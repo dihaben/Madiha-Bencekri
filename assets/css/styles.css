@@ -32,3 +32,38 @@
 .main-content ul li {
   margin-bottom: 10px;
 }
+
+/* Blog posts container */
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Blog post styling */
+.blog-post {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
+}
+
+.blog-post:hover {
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #007acc;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #005f99;
+}
