@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get in touch with Madiha Bencekri for inquiries, collaborations, or further information on her research and projects.">
+  <meta name="keywords" content="Contact, Collaboration, Research, Transportation Engineering, Urban Planning">
+  <meta name="author" content="Madiha Bencekri">
+  <title>Contact - Madiha Bencekri</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/loader.js" defer></script> <!-- Dynamic Navbar and Footer Loader -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Font Awesome for icons -->
+</head>
+<body>
+  <!-- Navbar -->
+  <header></header> <!-- Dynamically loads navbar.html -->
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Contact</h1>
+    <p>Feel free to reach out for inquiries, collaborations, or more information about my research and projects. You can use the contact form below or connect with me on LinkedIn.</p>
+
+    <!-- Contact Form -->
+    <form action="https://formspree.io/f/{your-form-id}" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <p>
+      Alternatively, you can connect with me via:
+      <ul>
+        <li>
+          <a href="mailto:madihabencekri@example.com">
+            <i class="fas fa-envelope"></i> Email: madihabencekri@example.com
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/madihabencekri" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn: linkedin.com/in/madihabencekri
+          </a>
+        </li>
+      </ul>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer></footer> <!-- Dynamically loads footer.html -->
+
+  <!-- Sidebar Toggle (Optional, if sidebar exists) -->
+  <script>
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    if (sidebarToggle) {
+      sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>
