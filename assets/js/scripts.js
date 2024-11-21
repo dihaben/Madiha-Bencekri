@@ -1,22 +1,17 @@
-// Sidebar Toggle Functionality
+// Enhanced Sidebar Toggle Functionality
 const sidebarToggle = document.querySelector('.sidebar-toggle');
 const sidebar = document.querySelector('.sidebar');
-const overlay = document.querySelector('.sidebar-overlay');
 
-if (sidebarToggle && sidebar && overlay) {
+if (sidebarToggle && sidebar) {
   sidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('active');
-    overlay.classList.toggle('visible');
 
+    // Add smooth animation
+    sidebar.style.transition = 'left 0.3s ease-in-out';
+
+    // Toggle the aria-expanded attribute for accessibility
     const expanded = sidebarToggle.getAttribute('aria-expanded') === 'true';
     sidebarToggle.setAttribute('aria-expanded', !expanded);
-  });
-
-  // Close sidebar when clicking on the overlay
-  overlay.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-    overlay.classList.remove('visible');
-    sidebarToggle.setAttribute('aria-expanded', false);
   });
 }
 
@@ -34,7 +29,7 @@ document.querySelectorAll('.menu a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Back-to-Top Button
+// Back-to-Top Button with Fade Effect
 const backToTopButton = document.createElement('button');
 backToTopButton.innerHTML = '↑';
 backToTopButton.className = 'back-to-top';
@@ -42,9 +37,11 @@ document.body.appendChild(backToTopButton);
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
-    backToTopButton.classList.add('visible');
+    backToTopButton.style.opacity = 1;
+    backToTopButton.style.visibility = 'visible';
   } else {
-    backToTopButton.classList.remove('visible');
+    backToTopButton.style.opacity = 0;
+    backToTopButton.style.visibility = 'hidden';
   }
 });
 
@@ -55,17 +52,12 @@ backToTopButton.addEventListener('click', () => {
   });
 });
 
-// Highlight Active Page in Sidebar
-document.addEventListener('DOMContentLoaded', () => {
-  const currentPage = window.location.pathname.split('/').pop();
-  const menuLinks = document.querySelectorAll('.menu a');
+// Dark Mode Toggle
+const themeToggle = document.createElement('button');
+themeToggle.className = 'theme-toggle';
+themeToggle.textContent = '🌙';
+document.body.appendChild(themeToggle);
 
-  menuLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
-    if (currentPage === linkPath || (currentPage === '' && linkPath === 'index.html')) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
 });
