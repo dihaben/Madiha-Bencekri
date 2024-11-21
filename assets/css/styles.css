@@ -16,90 +16,24 @@ body {
   margin: 0;
 }
 
-/* Sidebar Styles */
-.sidebar {
-  width: 250px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  background-color: #0056b3;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.sidebar .sidebar-profile {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.sidebar .profile-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid white;
-}
-
-.sidebar .sidebar-links {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar .sidebar-links li {
-  margin-bottom: 0.5rem;
-}
-
-.sidebar .sidebar-links li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  padding: 0.8rem 1rem;
-  display: block;
-  background-color: #007bff;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.sidebar .sidebar-links li a:hover,
-.sidebar .sidebar-links li a.active {
-  background-color: #ffd700;
-  color: black;
-}
-
 /* Header Styles */
 header {
   background-color: #0056b3;
   color: white;
-  padding: 1.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 1rem 2rem;
   text-align: center;
-  width: 100%;
-  height: 150px;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  animation: shine 2s linear infinite;
-}
-
-header .subtitle {
-  font-size: 1.2rem;
-  color: #f1f1f1;
-  margin-top: 10px;
-}
-
-header .tagline {
-  font-size: 1.1rem;
-  font-style: italic;
+  font-size: 2rem;
   color: #ffd700;
+  animation: shine 1s linear infinite;
+}
+
+header p.subtitle, header p.tagline {
+  font-size: 1.1rem;
+  color: #fff;
+  font-style: italic;
 }
 
 @keyframes shine {
@@ -114,22 +48,82 @@ header .tagline {
   }
 }
 
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #0056b3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-left: 10px;
+}
+
+.sidebar-profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sidebar-profile .profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid white;
+}
+
+.sidebar .profile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.sidebar .profile-title {
+  font-size: 1rem;
+  color: #f1f1f1;
+}
+
+.sidebar .sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar .sidebar-links li {
+  margin-bottom: 1rem;
+}
+
+.sidebar .sidebar-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar .sidebar-links li a:hover,
+.sidebar .sidebar-links li a.active {
+  background-color: #ffd700;
+  color: black;
+}
+
 /* Main Content Styles */
 .main-content {
-  margin-left: 250px; /* Adjusted for sidebar width */
+  margin-left: 250px;
   padding: 2rem;
+  width: calc(100% - 250px);
   max-width: 900px;
-  margin-top: 20px;
+  margin-top: 60px; /* space for header */
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;
-  text-align: center;
+  text-align: center; /* Center content */
   margin-bottom: 100px;
-}
-
-.main-content h1 {
-  margin-bottom: 20px;
 }
 
 /* Footer Styles */
@@ -138,9 +132,9 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+  width: 100%;
   position: fixed;
   bottom: 0;
-  width: 100%;
 }
 
 footer a {
@@ -169,17 +163,17 @@ footer a:hover {
   background-color: #004494;
 }
 
-/* Mobile-Friendly Sidebar */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .sidebar {
-    position: absolute;
-    top: 0;
-    left: -250px;
-    transition: transform 0.3s ease;
+  body {
+    flex-direction: column;
   }
 
-  .sidebar.active {
-    transform: translateX(0);
+  .sidebar {
+    width: 100%;
+    position: relative;
+    padding-top: 0;
+    padding-left: 0;
   }
 
   .main-content {
@@ -187,8 +181,8 @@ footer a:hover {
     padding: 1rem;
   }
 
-  .sidebar .sidebar-links li a {
-    font-size: 1rem;
-    padding: 0.8rem 1.2rem;
+  footer {
+    position: relative;
+    margin-top: 20px;
   }
 }
