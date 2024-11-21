@@ -162,6 +162,7 @@ header p.tagline {
 }
 
 /* Main Content */
+/* Main Content */
 .main-content {
   margin-left: 250px;
   margin-top: 100px; /* Header height */
@@ -180,13 +181,13 @@ header p.tagline {
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   padding: var(--content-padding);
-  max-width: 90%; /* Flexible width for smaller screens */
+  max-width: 800px; /* Sets a fixed maximum width for the content box */
   width: 100%;
   line-height: 1.8;
   text-align: left;
   display: flex;
-  flex-direction: column;
-  gap: var(--content-gap);
+  flex-direction: column; /* Aligns children vertically */
+  gap: var(--content-gap); /* Adds space between child elements */
 }
 
 /* Headings */
@@ -200,6 +201,7 @@ header p.tagline {
 
 .content-box h1 {
   font-size: 2rem;
+  text-align: center; /* Center-align the main heading */
 }
 
 .content-box h2 {
@@ -216,6 +218,7 @@ header p.tagline {
   margin-bottom: 1rem;
   font-size: 1.1rem;
   color: var(--text-color);
+  text-align: justify; /* Ensure consistent alignment */
 }
 
 .content-box p.highlight {
