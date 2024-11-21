@@ -11,4 +11,4 @@ This repository contains the source code for the professional portfolio of Madih
 ## Setup Instructions
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/portfolio.git
+   git clone https://dihaben.github.io/Madiha-Bencekri
