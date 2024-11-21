@@ -33,48 +33,50 @@ body {
 .sidebar .sidebar-links {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar .sidebar-links li {
-  margin-bottom: 0.5rem; /* Reduced space between menu items */
+  margin-bottom: 1rem; /* Reduced space between menu items */
+  width: 100%;
 }
 
 .sidebar .sidebar-links li a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
-  padding: 0.5rem 0;
+  padding: 0.8rem 1.5rem;
   display: block;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #007acc;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .sidebar .sidebar-links li a:hover,
 .sidebar .sidebar-links li a.active {
   background-color: #ffd700;
   color: black;
+  transform: scale(1.05); /* Adds button-like hover effect */
 }
 
 /* Header Styles */
 header {
   background-color: #0056b3;
   color: white;
-  padding: 0.8rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 120px; /* Adjusted height */
-}
-
-header .header-container {
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 120px; /* Adjusted height */
+  text-align: center;
 }
 
 header h1 {
   font-size: 2rem;
-  animation: shine 1s linear infinite;
+  animation: shine 1.5s linear infinite;
   margin: 0;
 }
 
