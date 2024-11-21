@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loadHTML = async (selector, file) => {
     const element = document.querySelector(selector);
     if (element) {
-      const response = await fetch(`assets/${file}`);  // Adjusted path to point to 'assets' folder
+      const response = await fetch(`assets/${file}`);  // Correct path to fetch files from the 'assets' folder
       if (response.ok) {
         element.innerHTML = await response.text();
       } else {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebar = document.querySelector('.sidebar');
   if (sidebarToggle && sidebar) {
     sidebarToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
+      sidebar.classList.toggle('active'); // Toggles visibility of the sidebar
     });
   }
 
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const sidebarLinks = document.querySelectorAll('.sidebar-link');
   sidebarLinks.forEach(link => {
     link.addEventListener('click', () => {
-      sidebarLinks.forEach(link => link.classList.remove('active'));
-      link.classList.add('active');
+      sidebarLinks.forEach(link => link.classList.remove('active'));  // Remove active class from all links
+      link.classList.add('active');  // Add active class to the clicked link
     });
   });
 });
